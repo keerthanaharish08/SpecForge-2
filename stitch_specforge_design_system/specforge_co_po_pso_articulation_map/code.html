@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#030712","on-surface":"#f8fafc","surface-container-high":"#1e293b","outline-variant":"#334155","secondary-container":"#0369a1","surface-container-highest":"#27364f","primary":"#f8fafc","primary-container":"#1d4ed8","surface-container":"#111827","surface-variant":"#1e293b","outline":"#64748b","on-primary":"#ffffff","error":"#f87171","error-container":"#450a0a","surface-container-lowest":"#090d16","surface":"#030712","on-surface-variant":"#94a3b8","secondary":"#38bdf8","surface-container-low":"#0d1424"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin":"1rem","margin-desktop":"2rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"code-sm":["JetBrains Mono"],"code-md":["JetBrains Mono"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"code-xs":["JetBrains Mono"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"code-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-[#030712] font-body-md text-body-md text-slate-100 antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-[#090d16] z-40 border-b border-slate-800 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span></div><span class="font-headline-sm text-headline-sm text-white tracking-tight">SpecForge</span><span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-code-xs text-code-xs border border-slate-700">v2.4-OBE</span></div><div class="h-4 w-px bg-slate-800 hidden lg:block"></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-[#0f172a] text-slate-300 border border-slate-800 font-code-sm text-code-sm"><span class="material-symbols-outlined text-[16px] text-slate-400">school</span><span>CS302: Advanced Algorithms &amp; Data Structures • Rev 2.4</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-[#0f172a] border border-slate-800 p-0.5 rounded-lg"><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">Author</button><button class="px-2.5 py-1 font-label-md text-label-md rounded bg-[#1e293b] text-white shadow-sm font-semibold transition-colors" type="button">Reviewer</button><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">HOD</button></div><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-700/60 font-code-xs text-code-xs"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span><span>In Review — 2 Pending Checks</span></div><div class="flex items-center gap-space-xs"><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg border border-slate-700 text-slate-200 bg-[#0f172a] hover:bg-slate-800 transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">save</span><span class="hidden sm:inline">Save Draft</span></button><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg bg-blue-600 text-white hover:bg-blue-500 shadow-sm transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">rule</span><span class="hidden sm:inline">Validate Spec</span></button></div><div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center"><span class="material-symbols-outlined text-slate-200 text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-14 h-[calc(100vh-3.5rem)] w-64 bg-[#090d16] border-r border-slate-800 z-30 flex flex-col justify-between p-space-sm"><div class="flex flex-col gap-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400">Academic Workflow</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-[#131d2e] text-blue-400 font-semibold border-l-2 border-blue-500"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="upload-specification" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">1. Upload</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="course-details" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">2. Spec Overview</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="co-po-mapping" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center font-code-xs text-code-xs">3</span><span class="font-body-sm text-body-sm">3. CO-PO-PSO Map</span></div><span class="w-2 h-2 rounded-full bg-blue-400"></span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="accreditation-checks" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">4</span><span class="font-body-sm text-body-sm">4. Checks &amp; Audit</span></div><span class="px-1.5 py-0.2 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 font-code-xs text-code-xs">2</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="approval-workflow" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">5</span><span class="font-body-sm text-body-sm">5. Workflow Routing</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="export-documents" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">6</span><span class="font-body-sm text-body-sm">6. Export Pack</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a></nav></div><div class="border-t border-slate-800 pt-space-sm px-space-sm flex flex-col gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-slate-400 text-[18px]">domain</span><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold text-white truncate">Dept of CSE</span><span class="font-code-xs text-code-xs text-slate-400">Autonomous Tier-1</span></div></div><a class="flex items-center gap-2 py-1 text-slate-400 hover:text-white font-body-sm text-body-sm transition-colors" data-path="guidelines-support" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span>Faculty Guidelines</span></a></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-14 bg-[#030712] p-space-md lg:p-space-lg"><div class="flex flex-col w-full text-on-surface">
+<!-- Top SpecForge Contextual Breadcrumb & Control Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_tree</span>
+<span>Curriculum Alignment</span>
+</div>
+<span class="text-outline font-label-sm">/</span>
+<span class="text-on-surface-variant font-body-sm">Outcome Mapping</span>
+<span class="text-outline font-label-sm">/</span>
+<span class="text-primary font-label-md bg-surface-container-lowest px-2 py-0.5 rounded">CS-401 Articulation Matrix</span>
+</div>
+<!-- Quick Action Toolbelt -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-secondary font-label-sm shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>AI Copilot Synced (v2.4-OBE)</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">analytics</span>
+<span>Matrix Statistics</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary-container text-on-primary-container hover:bg-primary font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[15px]">auto_fix_high</span>
+<span>Auto-Remediate (2 Flags)</span>
+</button>
+<button class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md transition-colors" title="Export Formats" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>CSV / LaTeX</span>
+</button>
+</div>
+</div>
+<!-- Screen Title & Narrative Lead -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm uppercase">Step 3 of 6</span>
+<span class="text-outline font-label-sm uppercase">Washington Accord Criteria 3.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-1">Course Articulation Matrix (CO-PO-PSO Mapping)</h1>
+<p class="font-body-md text-on-surface-variant max-w-2xl">
+        Direct correlation weights aligning CS-401 Course Outcomes against Washington Accord Program Outcomes (PO1–PO11) and Program Specific Outcomes (PSO1–PSO3). Correlation intensity drives accreditation readiness scores.
+      </p>
+</div>
+<!-- Tier-1 Threshold Indicator KPI Card -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-secondary" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="24.2" stroke-width="3.5"></circle>
+</svg>
+<span class="absolute font-label-md text-label-md font-semibold text-secondary">2.42</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tier-1 OBE Met</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Target Threshold ≥ 2.00 Index</span>
+<span class="font-label-sm text-label-sm text-secondary">91.4% Criteria Coverage</span>
+</div>
+</div>
+</div>
+<!-- Legend & Rule Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container px-space-md py-space-sm rounded-lg mb-space-md text-on-surface">
+<div class="flex items-center gap-space-md flex-wrap font-label-sm">
+<span class="text-outline uppercase font-semibold">Correlation Legend:</span>
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[11px] shadow-sm">3</span>
+<span class="text-on-surface">Very Strong (3)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[11px]">2</span>
+<span class="text-on-surface">Strong (2)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold text-[11px]">1</span>
+<span class="text-on-surface">Moderate (1)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded bg-surface-container-lowest text-outline flex items-center justify-center font-medium text-[11px]">—</span>
+<span class="text-on-surface-variant">None (0)</span>
+</div>
+<div class="flex items-center gap-1.5 pl-2 border-l border-surface-container-highest">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></span>
+<span class="text-error font-semibold">Audit Flag / Anomaly</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline font-label-sm">Heatmap View:</span>
+<div class="inline-flex p-0.5 rounded bg-surface-container-lowest">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm font-medium">Standard</button>
+<button class="px-2 py-0.5 rounded text-outline hover:text-on-surface font-label-sm">Weighted</button>
+<button class="px-2 py-0.5 rounded text-outline hover:text-on-surface font-label-sm">Attainment</button>
+</div>
+</div>
+</div>
+<!-- Main Workspace Grid: Matrix Left, Active Cell Inspector Drawer Right -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Central Articulation Matrix Container (Spans 8 cols on xl) -->
+<div class="xl:col-span-8 flex flex-col gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg overflow-x-auto shadow-sm">
+<table class="w-full text-left border-collapse select-none">
+<thead>
+<tr class="border-b border-surface-container-highest text-outline font-label-sm">
+<th class="py-2.5 px-3 min-w-[80px] bg-surface-container-lowest sticky left-0 z-20">Outcome</th>
+<th class="py-2.5 px-2 min-w-[70px] text-center">Bloom</th>
+<!-- POs -->
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO1: Engineering Knowledge">PO1</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO2: Problem Analysis">PO2</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO3: Design/Development of Solutions">PO3</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO4: Conduct Investigations">PO4</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] bg-primary/5 text-primary font-bold" title="PO5: Modern Tool Usage (Selected)">PO5</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO6: The Engineer and Society">PO6</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO7: Environment and Sustainability">PO7</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO8: Ethics">PO8</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO9: Individual and Team Work">PO9</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO10: Communication">PO10</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] hover:text-primary cursor-help" title="PO11: Project Management and Finance">PO11</th>
+<!-- Separator -->
+<th class="w-1 bg-surface-container-highest p-0"></th>
+<!-- PSOs -->
+<th class="py-2.5 px-1.5 text-center min-w-[34px] text-secondary font-medium" title="PSO1: Cloud &amp; Distributed Systems">PSO1</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] text-secondary font-medium" title="PSO2: Resilient DevOps &amp; Infra">PSO2</th>
+<th class="py-2.5 px-1.5 text-center min-w-[34px] text-secondary font-medium" title="PSO3: Algorithmic Scalability">PSO3</th>
+<th class="py-2.5 px-2 text-right min-w-[50px] font-semibold text-on-surface">Mean</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-label-md">
+<!-- CO1 Row -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-2.5 px-3 bg-surface-container-lowest sticky left-0 z-10">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">CO1</span>
+<span class="material-symbols-outlined text-[14px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">info</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm">L4</span>
+</td>
+<!-- PO1-PO11 -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center bg-primary/5"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<!-- Divider -->
+<td class="bg-surface-container-highest p-0"></td>
+<!-- PSOs -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-2 text-right font-semibold text-primary">2.38</td>
+</tr>
+<!-- CO2 Row -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-2.5 px-3 bg-surface-container-lowest sticky left-0 z-10">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">CO2</span>
+<span class="material-symbols-outlined text-[14px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">info</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm">L5</span>
+</td>
+<!-- PO1-PO11 -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center bg-primary/5"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<!-- Divider -->
+<td class="bg-surface-container-highest p-0"></td>
+<!-- PSOs -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-2 text-right font-semibold text-primary">2.50</td>
+</tr>
+<!-- CO3 Row (Active row featuring selected flagged cell CO3 × PO5) -->
+<tr class="bg-primary/5 transition-colors group">
+<td class="py-2.5 px-3 bg-surface-container-lowest sticky left-0 z-10">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-secondary">CO3</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm">L3</span>
+</td>
+<!-- PO1-PO11 -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<!-- SELECTED CELL WITH AUDIT WARNING DOT (CO3 x PO5) -->
+<td class="py-2.5 px-1 text-center bg-primary/20 relative cursor-pointer ring-2 ring-primary rounded-sm">
+<span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error shadow-sm" title="Rule CR-04 Flagged"></span>
+<span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-extrabold shadow">3</span>
+</td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<!-- Divider -->
+<td class="bg-surface-container-highest p-0"></td>
+<!-- PSOs -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<td class="py-2.5 px-2 text-right font-semibold text-primary">2.40</td>
+</tr>
+<!-- CO4 Row (Contains second audit violation dot on PO7) -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-2.5 px-3 bg-surface-container-lowest sticky left-0 z-10">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">CO4</span>
+<span class="material-symbols-outlined text-[14px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">info</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm">L6</span>
+</td>
+<!-- PO1-PO11 -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center bg-primary/5"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<!-- Flagged cell CO4 x PO7 (Green computing / Carbon emission lack of mapping) -->
+<td class="py-2.5 px-1 text-center relative cursor-pointer group/cell">
+<span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-error" title="Audit: Missing energy efficiency metric in distributed cloud"></span>
+<span class="text-outline group-hover/cell:text-on-surface">—</span>
+</td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<!-- Divider -->
+<td class="bg-surface-container-highest p-0"></td>
+<!-- PSOs -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-2 text-right font-semibold text-primary">2.75</td>
+</tr>
+<!-- CO5 Row -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-2.5 px-3 bg-surface-container-lowest sticky left-0 z-10">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">CO5</span>
+<span class="material-symbols-outlined text-[14px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">info</span>
+</div>
+</td>
+<td class="py-2.5 px-2 text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm">L5</span>
+</td>
+<!-- PO1-PO11 -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center bg-primary/5"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-surface-container-highest text-secondary flex items-center justify-center font-bold">1</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2.5 px-1 text-center"><span class="text-outline">—</span></td>
+<!-- Divider -->
+<td class="bg-surface-container-highest p-0"></td>
+<!-- PSOs -->
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">3</span></td>
+<td class="py-2.5 px-1 text-center"><span class="w-7 h-7 mx-auto rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span></td>
+<td class="py-2.5 px-2 text-right font-semibold text-primary">2.10</td>
+</tr>
+</tbody>
+<!-- Aggregate Statistical Footer -->
+<tfoot class="border-t-2 border-surface-container-highest font-label-sm text-outline">
+<!-- PO Attainment Mean -->
+<tr class="bg-surface-container-low font-semibold text-on-surface">
+<td class="py-2 px-3 sticky left-0 bg-surface-container-low text-primary">PO Mean</td>
+<td class="text-center text-outline">—</td>
+<td class="text-center py-2">2.60</td>
+<td class="text-center py-2">2.80</td>
+<td class="text-center py-2">2.60</td>
+<td class="text-center py-2">2.20</td>
+<td class="text-center py-2 bg-primary/10 text-primary">2.20</td>
+<td class="text-center py-2 text-outline">1.00</td>
+<td class="text-center py-2 text-outline">—</td>
+<td class="text-center py-2 text-outline">1.00</td>
+<td class="text-center py-2">2.00</td>
+<td class="text-center py-2 text-outline">1.00</td>
+<td class="text-center py-2 text-outline">1.67</td>
+<td class="bg-surface-container-highest p-0"></td>
+<td class="text-center py-2 text-secondary">2.80</td>
+<td class="text-center py-2 text-secondary">2.60</td>
+<td class="text-center py-2 text-secondary">2.20</td>
+<td class="text-right py-2 px-2 text-secondary font-bold">2.42</td>
+</tr>
+<!-- Coverage Row -->
+<tr class="bg-surface-container-lowest text-[10px]">
+<td class="py-1 px-3 sticky left-0 bg-surface-container-lowest text-outline uppercase">Coverage</td>
+<td class="text-center">—</td>
+<td class="text-center py-1">100%</td>
+<td class="text-center py-1">100%</td>
+<td class="text-center py-1">100%</td>
+<td class="text-center py-1">80%</td>
+<td class="text-center py-1 bg-primary/5 text-primary">100%</td>
+<td class="text-center py-1">20%</td>
+<td class="text-center py-1 text-error font-bold">0% ⚠</td>
+<td class="text-center py-1">20%</td>
+<td class="text-center py-1">80%</td>
+<td class="text-center py-1">40%</td>
+<td class="text-center py-1">60%</td>
+<td class="bg-surface-container-highest p-0"></td>
+<td class="text-center py-1 text-secondary">100%</td>
+<td class="text-center py-1 text-secondary">100%</td>
+<td class="text-center py-1 text-secondary">100%</td>
+<td class="text-right py-1 px-2 text-on-surface">91.4%</td>
+</tr>
+</tfoot>
+</table>
+<!-- Micro Sparkline / Quick Legend Bar underneath table -->
+<div class="flex items-center justify-between pt-2 px-2 border-t border-surface-container text-on-surface-variant font-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-primary">touch_app</span>
+<span>Click any grid intersection to inspect Bloom-level justifications and criteria assertions.</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-outline">Active Selection:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-bold">CO3 × PO5 (Weight: 3)</span>
+</div>
+</div>
+</div>
+<!-- Active Cell Inspector Flyout Panel (Spans 4 cols on xl) -->
+<div class="xl:col-span-4 flex flex-col gap-space-sm bg-surface-container p-space-md rounded-lg shadow-md border border-primary/20">
+<!-- Panel Header & Coordinates -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-md font-bold tracking-wider">
+            CO3 × PO5
+          </span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Mapping Inspector</span>
+</div>
+<button aria-label="Close Inspector" class="w-7 h-7 rounded flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Audit Warning Alert Banner for Selected Cell -->
+<div class="flex items-start gap-2.5 p-space-sm rounded bg-error-container/30 border border-error/40 text-on-surface">
+<span class="material-symbols-outlined text-error text-[18px] mt-0.5 shrink-0">warning</span>
+<div class="flex flex-col gap-0.5 font-body-sm">
+<span class="font-semibold text-error font-label-sm uppercase">Audit Flag CR-04 Triggered</span>
+<span class="text-on-surface text-[12px] leading-snug">
+            High practical workload detected in Unit IV lab (Go Concurrency &amp; Raft RPC). Correlation upgraded from 1 to 3 requires documented modern profiler tooling.
+          </span>
+</div>
+</div>
+<!-- Target Program Outcome Specification Details -->
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-secondary uppercase font-semibold">Program Outcome (PO5)</span>
+<span class="font-label-sm text-outline">Washington Accord</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Modern Tool Usage</span>
+<p class="font-body-sm text-on-surface-variant text-[12px] leading-relaxed">
+          "Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modelling to complex engineering activities with an understanding of the limitations."
+        </p>
+</div>
+<!-- Course Outcome Context -->
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-primary uppercase font-semibold">Course Outcome (CO3)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm">Bloom: L3 (Apply)</span>
+</div>
+<p class="font-body-sm text-on-surface text-[13px] leading-snug">
+          Implement Raft leader election, heartbeat RPCs, and state machine replication services using concurrent Go routines and channel synchronizations.
+        </p>
+</div>
+<!-- Correlation Strength Selector -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-outline uppercase font-semibold">Correlation Strength</span>
+<span class="font-label-sm text-secondary">Direct Contribution</span>
+</div>
+<div class="grid grid-cols-4 gap-1.5">
+<button class="flex flex-col items-center py-2 px-1 rounded bg-surface-container-lowest hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors border border-transparent font-label-md" type="button">
+<span class="font-bold text-[14px]">0</span>
+<span class="text-[10px]">None</span>
+</button>
+<button class="flex flex-col items-center py-2 px-1 rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface transition-colors border border-transparent font-label-md" type="button">
+<span class="font-bold text-[14px] text-secondary">1</span>
+<span class="text-[10px]">Moderate</span>
+</button>
+<button class="flex flex-col items-center py-2 px-1 rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface transition-colors border border-transparent font-label-md" type="button">
+<span class="font-bold text-[14px] text-secondary">2</span>
+<span class="text-[10px]">Strong</span>
+</button>
+<!-- Active Selection (3) -->
+<button class="flex flex-col items-center py-2 px-1 rounded bg-primary-container text-on-primary-container transition-colors ring-2 ring-primary font-label-md shadow-sm" type="button">
+<span class="font-bold text-[14px]">3</span>
+<span class="text-[10px] font-semibold">Very Strong</span>
+</button>
+</div>
+</div>
+<!-- Academic Justification & Syllabus Citation -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-outline uppercase font-semibold">Academic Justification</span>
+<span class="font-label-sm text-outline">Mandatory for NBA Tier-1</span>
+</div>
+<textarea class="w-full bg-surface-container-lowest border border-surface-container-highest rounded p-2 text-on-surface font-body-sm text-[12px] leading-relaxed resize-none focus:outline-none focus:border-primary transition-colors" placeholder="State explicit alignment reason..." rows="3">Students construct Raft consensus engines directly utilizing Go runtime race detectors, Delve remote debuggers, and Prometheus metrics scraping to inspect distributed synchronization latency.</textarea>
+</div>
+<!-- AI Recommended Correction Pill -->
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container-low border border-secondary/30">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5 shrink-0">psychology</span>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-secondary font-semibold">Copilot Remediation</span>
+<span class="px-1 py-0.2 rounded bg-secondary/10 text-secondary text-[9px] uppercase font-bold">Approved</span>
+</div>
+<p class="font-body-sm text-on-surface-variant text-[11px] leading-tight">
+            Laboratory Assignment 4 &amp; 5 verify 18 contact hours with Go tooling. Upgrading from 1 to 3 satisfies Criteria 3.2.1 completely.
+          </p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-2 border-t border-surface-container-highest">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-primary-fixed font-label-md font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Apply &amp; Resolve Flag</span>
+</button>
+<button class="py-2 px-3 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md transition-colors" type="button">
+          Revert
+        </button>
+</div>
+</div>
+</div>
+<!-- Bottom Outcomes Directory & Secondary Anomaly Callout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-md">
+<!-- CO Reference Catalog -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container-highest">
+<span class="font-label-sm text-outline uppercase font-semibold">Course Outcomes Catalog</span>
+<span class="font-label-sm text-primary">5 Outcomes Defined</span>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-[12px]">
+<div class="flex items-start gap-2">
+<span class="font-label-sm text-primary font-bold shrink-0">CO1</span>
+<span class="text-on-surface-variant truncate">Analyze distributed consensus protocols &amp; state machine replication.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-sm text-primary font-bold shrink-0">CO2</span>
+<span class="text-on-surface-variant truncate">Evaluate fault recovery models in partitioned cloud systems.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-sm text-secondary font-bold shrink-0">CO3</span>
+<span class="text-on-surface truncate">Implement Raft leader election and log replication services.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-sm text-primary font-bold shrink-0">CO4</span>
+<span class="text-on-surface-variant truncate">Architect zero-trust service meshes with mTLS telemetry.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-sm text-primary font-bold shrink-0">CO5</span>
+<span class="text-on-surface-variant truncate">Synthesize distributed storage scaling policies across multi-region clusters.</span>
+</div>
+</div>
+</div>
+<!-- Active Program Specific Outcomes (PSOs) -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container-highest">
+<span class="font-label-sm text-outline uppercase font-semibold">Program Specific Outcomes (PSOs)</span>
+<span class="font-label-sm text-secondary">CSE Dept Autonomous</span>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-[12px]">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-secondary font-bold">PSO1: Cloud &amp; Distributed Systems</span>
+<span class="text-on-surface-variant leading-tight">Design highly resilient, horizontally scalable microservice architectures.</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-secondary font-bold">PSO2: Resilient DevOps &amp; Infrastructure</span>
+<span class="text-on-surface-variant leading-tight">Automate CI/CD pipelines with declarative infrastructure and chaos engineering.</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-secondary font-bold">PSO3: Algorithmic Scalability</span>
+<span class="text-on-surface-variant leading-tight">Optimize distributed hash tables, gossip protocols, and Byzantine resilience.</span>
+</div>
+</div>
+</div>
+<!-- Pending Verification Checklist -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container-highest">
+<span class="font-label-sm text-outline uppercase font-semibold">Accreditation Pre-Flight Audit</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container/30 text-error font-label-sm font-bold">2 Issues</span>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-[12px]">
+<div class="flex items-start gap-2 p-1.5 rounded bg-surface-container-low border border-error/20">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">error</span>
+<div class="flex flex-col">
+<span class="font-label-sm font-bold text-on-surface">PO7 Zero-Coverage Alert</span>
+<span class="text-on-surface-variant text-[11px]">No Course Outcome currently maps to Environment &amp; Sustainability (PO7).</span>
+</div>
+</div>
+<div class="flex items-start gap-2 p-1.5 rounded bg-surface-container-low border border-secondary/20">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">pending_actions</span>
+<div class="flex flex-col">
+<span class="font-label-sm font-bold text-on-surface">CO3 × PO5 Review Pending</span>
+<span class="text-on-surface-variant text-[11px]">Weight set to 3. Awaiting HOD reviewer verification sign-off.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-outline">Next: Step 4 Checks &amp; Audit</span>
+<a class="font-label-sm text-primary hover:underline flex items-center gap-1" href="#">
+<span>Proceed to Step 4</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

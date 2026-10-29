@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#030712","on-surface":"#f8fafc","surface-container-high":"#1e293b","outline-variant":"#334155","secondary-container":"#0369a1","surface-container-highest":"#27364f","primary":"#f8fafc","primary-container":"#1d4ed8","surface-container":"#111827","surface-variant":"#1e293b","outline":"#64748b","on-primary":"#ffffff","error":"#f87171","error-container":"#450a0a","surface-container-lowest":"#090d16","surface":"#030712","on-surface-variant":"#94a3b8","secondary":"#38bdf8","surface-container-low":"#0d1424"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin":"1rem","margin-desktop":"2rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"code-sm":["JetBrains Mono"],"code-md":["JetBrains Mono"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"code-xs":["JetBrains Mono"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"code-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-[#030712] font-body-md text-body-md text-slate-100 antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-[#090d16] z-40 border-b border-slate-800 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-[#081b2e] border border-[#173454] flex items-center justify-center shadow-sm shrink-0 p-1"><svg class="w-full h-full" fill="none" viewbox="0 0 70 70"><path d="M8 8 L38 8 C42 8 45 11 45 15 L45 28 C45 32 42 35 38 35 L8 35 C4 35 1 32 1 28 L1 15 C1 11 4 8 8 8 Z" fill="#38bdf8"></path><circle cx="58" cy="21.5" fill="#60a5fa" r="9"></circle><line stroke="#ffffff" stroke-linecap="round" stroke-width="2.5" x1="45" x2="58" y1="21.5" y2="21.5"></line><circle cx="32" cy="21.5" fill="#081b2e" r="2.5"></circle><path d="M8 43 L22 43 C26 43 29 46 29 50 L29 59 C29 63 26 66 22 66 L8 66 C4 66 1 63 1 59 L1 50 C1 46 4 43 8 43 Z" fill="#1d4ed8"></path><path d="M37 43 L61 43 C65 43 68 46 68 50 L68 59 C68 63 65 66 61 66 L37 66 C33 66 30 63 30 59 L30 50 C30 46 33 43 37 43 Z" fill="#38bdf8"></path></svg></div><div class="flex items-baseline gap-1.5"><span class="font-headline-sm text-headline-sm tracking-tight text-white font-bold">Spec<span class="text-[#38bdf8]">Forge</span></span><span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-code-xs text-code-xs border border-slate-700">v2.4-OBE</span></div></div></div><div class="h-4 w-px bg-slate-800 hidden lg:block"></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-[#0f172a] text-slate-300 border border-slate-800 font-code-sm text-code-sm"><span class="material-symbols-outlined text-[16px] text-slate-400">school</span><span>CS302: Advanced Algorithms &amp; Data Structures • Rev 2.4</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-[#0f172a] border border-slate-800 p-0.5 rounded-lg"><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">Author</button><button class="px-2.5 py-1 font-label-md text-label-md rounded bg-[#1e293b] text-white shadow-sm font-semibold transition-colors" type="button">Reviewer</button><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">HOD</button></div><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-700/60 font-code-xs text-code-xs"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span><span>In Review — 2 Pending Checks</span></div><div class="flex items-center gap-space-xs"><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg border border-slate-700 text-slate-200 bg-[#0f172a] hover:bg-slate-800 transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">save</span><span class="hidden sm:inline">Save Draft</span></button><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg bg-blue-600 text-white hover:bg-blue-500 shadow-sm transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">rule</span><span class="hidden sm:inline">Validate Spec</span></button></div><div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center"><span class="material-symbols-outlined text-slate-200 text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-14 h-[calc(100vh-3.5rem)] w-64 bg-[#090d16] border-r border-slate-800 z-30 flex flex-col justify-between p-space-sm"><div class="flex flex-col gap-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400">Academic Workflow</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-[#131d2e] text-blue-400 font-semibold border-l-2 border-blue-500"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="upload-specification" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">1. Upload</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="course-details" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">2. Spec Overview</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="co-po-mapping" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center font-code-xs text-code-xs">3</span><span class="font-body-sm text-body-sm">3. CO-PO-PSO Map</span></div><span class="w-2 h-2 rounded-full bg-blue-400"></span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="accreditation-checks" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">4</span><span class="font-body-sm text-body-sm">4. Checks &amp; Audit</span></div><span class="px-1.5 py-0.2 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 font-code-xs text-code-xs">2</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="approval-workflow" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">5</span><span class="font-body-sm text-body-sm">5. Workflow Routing</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="export-documents" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">6</span><span class="font-body-sm text-body-sm">6. Export Pack</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a></nav></div><div class="border-t border-slate-800 pt-space-sm px-space-sm flex flex-col gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-slate-400 text-[18px]">domain</span><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold text-white truncate">Dept of CSE</span><span class="font-code-xs text-code-xs text-slate-400">Autonomous Tier-1</span></div></div><a class="flex items-center gap-2 py-1 text-slate-400 hover:text-white font-body-sm text-body-sm transition-colors" data-path="guidelines-support" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span>Faculty Guidelines</span></a></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-14 bg-[#030712] p-space-md lg:p-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP HEADER / GOVERNANCE BANNER -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+          Step 05 • Governance &amp; Approvals
+        </span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+          Board of Studies (BOS) Cycle 2024–25
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">
+          NBA Tier-1 Criteria 2 &amp; 3
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Specification Approval &amp; Routing Workflow
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Multi-tiered academic governance lifecycle aligning syllabus drafts through peer departmental review and Head of Department (HOD) accreditation sign-off.
+      </p>
+</div>
+<!-- Quick Action / Persona Simulation Controls -->
+<div class="flex items-center gap-space-sm self-start md:self-auto flex-wrap">
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-lg">
+<span class="px-2 font-label-sm text-label-sm text-outline uppercase tracking-wider">Simulate Role:</span>
+<button class="persona-tab px-2.5 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="btn-role-author" onclick="switchPersona('author')" type="button">
+          Author
+        </button>
+<button class="persona-tab px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-md text-label-md transition-all" id="btn-role-reviewer" onclick="switchPersona('reviewer')" type="button">
+          Reviewer (Active)
+        </button>
+<button class="persona-tab px-2.5 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="btn-role-hod" onclick="switchPersona('hod')" type="button">
+          HOD
+        </button>
+</div>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Export Summary (PDF)</span>
+</button>
+</div>
+</section>
+<!-- WORKFLOW PROGRESS STEPPER WITH CONNECTOR TRACKS -->
+<section class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Sequential Routing Line</span>
+<span class="text-xs px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Stage 3 of 5</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">update</span>
+<span>SLA Target: 48h Remaining</span>
+</div>
+</div>
+<!-- Stepper Grid -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative">
+<!-- Step 1: Draft -->
+<div class="flex flex-col bg-surface-container p-3 rounded-lg relative overflow-hidden group">
+<div class="flex items-center justify-between mb-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-secondary-fixed flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Done</span>
+</div>
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">1. Draft</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Prof. A. Sharma</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">Oct 14, 18:30 IST</span>
+</div>
+<!-- Step 2: Submitted -->
+<div class="flex flex-col bg-surface-container p-3 rounded-lg relative overflow-hidden group">
+<div class="flex items-center justify-between mb-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-secondary-fixed flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Done</span>
+</div>
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">2. Submitted</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Course Coordinator</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">Oct 15, 11:20 IST</span>
+</div>
+<!-- Step 3: Under Review (ACTIVE) -->
+<div class="flex flex-col bg-surface-container-high p-3 rounded-lg relative overflow-hidden ring-1 ring-primary/40 shadow-lg">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary"></div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm relative">
+<span class="w-2 h-2 rounded-full bg-on-primary animate-ping absolute"></span>
+<span class="font-label-sm text-label-sm font-bold relative">3</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider animate-pulse">Current Stage</span>
+</div>
+<span class="font-headline-sm text-[16px] text-primary font-bold">3. Under Review</span>
+<span class="font-body-sm text-body-sm text-on-surface mt-0.5 font-medium">Dr. K. Ramanathan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Syllabus Sub-Committee</span>
+</div>
+<!-- Step 4: Pending HOD -->
+<div class="flex flex-col bg-surface-container p-3 rounded-lg opacity-75">
+<div class="flex items-center justify-between mb-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-outline flex items-center justify-center font-label-sm text-label-sm font-semibold">
+            4
+          </div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Queued</span>
+</div>
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">4. Pending HOD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Prof. S. Sen</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">Dept Head Approval</span>
+</div>
+<!-- Step 5: Approved -->
+<div class="flex flex-col bg-surface-container p-3 rounded-lg opacity-60">
+<div class="flex items-center justify-between mb-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-outline flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Terminal</span>
+</div>
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">5. Approved</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">BOS Ratification</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">Registrar Seal &amp; Lock</span>
+</div>
+</div>
+<!-- Return State Exception Pathway Banner -->
+<div class="mt-space-xs p-3 rounded-lg bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-error uppercase tracking-wider">Exception Branch:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Returned for Remediation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            If rejected at either Peer Review or HOD level, specification is reverted to Draft status, editing locks are released for the Author, and revision cycle increments automatically to <code class="font-label-sm text-label-sm text-secondary bg-surface-container px-1 py-0.5 rounded">Rev 2.5</code>.
+          </p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+          Mandates Reason Log
+        </span>
+</div>
+</div>
+</section>
+<!-- TWO COLUMN MAIN WORKSPACE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (APPROX 65% / 8 COLS): ROLE ACTION PANELS & COMPLIANCE PRE-FLIGHT -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- PERSONA BANNER & SWITCH NOTIFIER -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm shadow-md" id="persona-alert">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]" id="persona-icon">rate_review</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline" id="persona-caption">Current Verified Session</span>
+<span class="font-headline-sm text-headline-sm text-on-surface" id="persona-title">Reviewer: Dr. K. Ramanathan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="persona-desc">Curriculum Sub-Committee (Autonomous Tier-1 Representative)</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span id="persona-badge">Full Endorsement Authority</span>
+</span>
+</div>
+</div>
+<!-- ACTION BLOCK 1: REVIEWER ACTIONS (ACTIVE DEFAULT) -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md shadow-md" id="panel-reviewer-actions">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Peer Reviewer Decision Deck</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review Course Outcomes, Bloom levels, and contact hour allocation before forwarding to Head of Department.</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">Role: Active</span>
+</div>
+<!-- Action Form: Comment box & preset tags -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="review-feedback">
+<span>Reviewer Feedback &amp; Audit Notes <span class="text-error font-normal text-xs">(Required only when returning)</span></span>
+<span class="text-outline font-label-sm text-label-sm" id="feedback-counter">0 / 500 chars</span>
+</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline p-3 rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary transition-all" id="review-feedback" oninput="updateCharCount(this)" placeholder="Enter detailed pedagogical or contact hour remarks for the author..." rows="4"></textarea>
+<!-- Preset quick injection tags -->
+<div class="flex items-center gap-2 flex-wrap pt-1">
+<span class="font-label-sm text-label-sm text-outline">Quick Presets:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" onclick="insertPreset('Clarify Unit 4 Lab Hours: Contact hours do not align with 2-credit practical schema.')" type="button">
+              + Clarify Unit 4 Lab Hours
+            </button>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" onclick="insertPreset('Taxonomy verb too low: CO3 should map to Bloom Level 4 (Analyze) rather than Level 2.')" type="button">
+              + Taxonomy verb too low
+            </button>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" onclick="insertPreset('CIE weight discrepancy: Mid-sem tests must constitute 30% of total continuous assessment.')" type="button">
+              + CIE weight discrepancy
+            </button>
+</div>
+</div>
+<!-- Execution Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm pt-space-xs">
+<button class="flex-1 px-4 py-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary-container/90 transition-all font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md" onclick="executeDecision('forward')" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<div class="flex flex-col text-left">
+<span>Forward to HOD</span>
+<span class="font-label-sm text-label-sm opacity-80 font-normal">Validates all CO-PO maps &amp; AI fixes, advances to Prof. S. Sen</span>
+</div>
+</button>
+<button class="px-4 py-3 rounded-lg bg-surface-container text-error hover:bg-surface-container-high hover:text-on-error-container transition-all font-label-lg text-label-lg flex items-center justify-center gap-2" onclick="executeDecision('return')" type="button">
+<span class="material-symbols-outlined text-[20px]">keyboard_return</span>
+<div class="flex flex-col text-left">
+<span>Return with Comment</span>
+<span class="font-label-sm text-label-sm opacity-80 font-normal text-outline">Reverts to Rev 2.5 Draft for Author</span>
+</div>
+</button>
+</div>
+</div>
+<!-- ACTION BLOCK 2: AUTHOR ACTIONS (INACTIVE IN REVIEWER PERSONA) -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm transition-opacity opacity-50" id="panel-author-actions">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-outline">edit_document</span>
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Author Actions (Course Coordinator)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm" id="badge-author-state">
+            Disabled for Reviewer
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Initial draft authors submit updated documents for department review. When active as Author, you can trigger re-submission of drafts once remediations are complete.
+        </p>
+<div class="flex items-center gap-3 pt-2">
+<button class="px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed" disabled="" id="btn-author-submit" type="button">
+<span class="material-symbols-outlined text-[16px]">publish</span>
+<span>Submit for Review</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline italic">
+            Locked: Only Prof. Ananya Sharma can push revisions while under active review.
+          </span>
+</div>
+</div>
+<!-- ACTION BLOCK 3: HOD ACTIONS (INACTIVE IN REVIEWER PERSONA) -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm transition-opacity opacity-50" id="panel-hod-actions">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-outline">verified</span>
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Head of Department Final Ratification</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm" id="badge-hod-state">
+            Requires Reviewer Sign-off First
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Final executive authority to seal syllabus into institutional repository and dispatch to Academic Council.
+        </p>
+<div class="flex items-center gap-3 pt-2 flex-wrap">
+<button class="px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed" disabled="" id="btn-hod-approve" type="button">
+<span class="material-symbols-outlined text-[16px]">approval</span>
+<span>Approve Specification</span>
+</button>
+<button class="px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed" disabled="" id="btn-hod-return" type="button">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Return to Author / Reviewer</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline italic">
+            Requires HOD credentials (Prof. S. Sen) after Reviewer endorsement.
+          </span>
+</div>
+</div>
+<!-- PRE-FLIGHT COMPLIANCE VERIFICATION SUMMARY WIDGET -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Sign-off Pre-requisites &amp; Audit Readiness</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">3 of 4 Criteria Met</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1">
+<!-- Check item 1 -->
+<div class="p-2.5 rounded bg-surface-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">NBA Tier-1 Bloom's Verb Compliance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100% of CO verbs mapped to revised taxonomy (K3-K6)</span>
+</div>
+</div>
+<!-- Check item 2 -->
+<div class="p-2.5 rounded bg-surface-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Contact Hours Parity Check</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">W = L + P = 70 hrs verified against 4-credit standard</span>
+</div>
+</div>
+<!-- Check item 3 -->
+<div class="p-2.5 rounded bg-surface-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Assessment Weightage Parity</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CIE:SEE 60:40 parity validated by automated rule engine</span>
+</div>
+</div>
+<!-- Check item 4 (Notice) -->
+<div class="p-2.5 rounded bg-surface-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">priority_high</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-error">Faculty Confirmation Notice</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending optional verification on PO7 (Ethics &amp; Environment)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (APPROX 35% / 4 COLS): GOVERNANCE AUDIT TRAIL TIMELINE -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-md shadow-md">
+<!-- Header -->
+<div class="flex flex-col pb-space-xs border-b border-surface-container-highest">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Governance Audit Trail</h2>
+<span class="material-symbols-outlined text-[18px] text-outline">history</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immutable ledger of workflow transitions and peer comments.</p>
+</div>
+<!-- Vertical Timeline Container -->
+<div class="relative pl-6 flex flex-col gap-space-lg before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-highest">
+<!-- Event 1 (Most Recent - 2 hrs ago) -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-primary flex items-center justify-center ring-4 ring-surface-container-low">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase">2 hours ago</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">In Progress</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Initiated Review &amp; Cross-Validation</span>
+<span class="font-label-sm text-label-sm text-secondary">Dr. K. Ramanathan (Peer Reviewer)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+              Ran automated SpecForge checks. Verified Bloom Level 5 upgrades for CO2 and approved 60:40 CIE:SEE assessment redistribution.
+            </p>
+</div>
+<!-- Event 2 (Yesterday, 16:45) -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[10px] text-outline">smart_toy</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Yesterday, 16:45</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">System Event</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Auto-Remediation Applied</span>
+<span class="font-label-sm text-label-sm text-outline">SpecForge AI Engine (Autonomous OBE-Core v4.8)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+              Applied 4 auto-fixes: passive verb remediation, contact hour equivalence, and CIE rubric re-normalization.
+            </p>
+</div>
+<!-- Event 3 (Oct 15, 11:20) -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[10px] text-secondary">arrow_upward</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Oct 15, 11:20</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Submitted</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Submitted for Department Review</span>
+<span class="font-label-sm text-label-sm text-secondary">Prof. Ananya Sharma (Course Coordinator)</span>
+<blockquote class="font-body-sm text-body-sm text-on-surface-variant mt-1 p-2 rounded bg-surface-container-lowest border-l-2 border-primary/40 italic">
+              "Please review the updated distributed systems lab integration in Units 4 and 5. Contact hours adjusted to 70 total contact hrs."
+            </blockquote>
+</div>
+<!-- Event 4 (Oct 12, 09:15) -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[10px] text-outline">add</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Oct 12, 09:15</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm">Draft Initialized</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Created Draft Specification (Rev 2.4)</span>
+<span class="font-label-sm text-label-sm text-outline">Prof. Ananya Sharma (Author)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Imported from legacy docx syllabus and initiated OBE transformation pipeline.
+            </p>
+</div>
+</div>
+<!-- Historical Revision Context Card -->
+<div class="mt-space-sm p-3 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">history_edu</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Archived Cycle Context</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Previous revision (<strong class="text-on-surface">Rev 2.3</strong>) was Returned by HOD on Sep 28 for contact hour misalignment.
+          </p>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1 self-start" href="#">
+<span>View Rev 2.3 Diff Audit</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- BOS Meeting Schedule Widget -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Statutory BOS Schedule</span>
+<span class="material-symbols-outlined text-[16px] text-outline">event</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Nov 04, 2024</span>
+<span class="font-label-sm text-label-sm text-secondary">Meeting 14-B</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Specifications approved by Oct 28 will be included in the primary agenda dispatch to external university nominees.
+        </p>
+</div>
+</div>
+</div>
+<!-- PERSISTENT FOOTER / STEP NAVIGATION BAR -->
+<footer class="mt-space-lg pt-space-md border-t border-surface-container-highest flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<a class="px-4 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Back to Step 4: Checks &amp; Audit</span>
+</a>
+<span class="hidden md:inline font-body-sm text-body-sm text-on-surface-variant">
+        All automated unit and rubric checks passed.
+      </span>
+</div>
+<div class="flex items-center gap-space-md flex-wrap justify-end">
+<div class="flex items-center gap-2 text-right">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+          Reviewer endorsement will notify HOD and registrar dispatch
+        </span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary-container/90 transition-all font-label-md text-label-md flex items-center gap-2 shadow-sm font-semibold" href="#">
+<span>Proceed to Step 6: Export Pack</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</footer>
+</div>
+<script>
+  function updateCharCount(textarea) {
+    const counter = document.getElementById('feedback-counter');
+    if (counter) {
+      counter.textContent = `${textarea.value.length} / 500 chars`;
+    }
+  }
+
+  function insertPreset(text) {
+    const textarea = document.getElementById('review-feedback');
+    if (textarea) {
+      if (textarea.value.trim().length > 0) {
+        textarea.value += '\n• ' + text;
+      } else {
+        textarea.value = '• ' + text;
+      }
+      updateCharCount(textarea);
+      textarea.focus();
+    }
+  }
+
+  function executeDecision(type) {
+    const feedbackBox = document.getElementById('review-feedback');
+    if (type === 'return') {
+      if (!feedbackBox.value.trim()) {
+        feedbackBox.classList.add('ring-2', 'ring-error');
+        feedbackBox.focus();
+        alert('Remediation note is required before returning specification to Author.');
+        return;
+      }
+      feedbackBox.classList.remove('ring-2', 'ring-error');
+      alert('Specification returned to Prof. Ananya Sharma with remarks. Incrementing cycle to Rev 2.5.');
+    } else if (type === 'forward') {
+      alert('Specification endorsed by Reviewer. Successfully forwarded to HOD (Prof. S. Sen) for BOS sign-off.');
+    }
+  }
+
+  function switchPersona(role) {
+    // Reset all tabs
+    document.querySelectorAll('.persona-tab').forEach(btn => {
+      btn.className = 'persona-tab px-2.5 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+    });
+
+    const btnAuthor = document.getElementById('btn-role-author');
+    const btnReviewer = document.getElementById('btn-role-reviewer');
+    const btnHod = document.getElementById('btn-role-hod');
+
+    const panelReviewer = document.getElementById('panel-reviewer-actions');
+    const panelAuthor = document.getElementById('panel-author-actions');
+    const panelHod = document.getElementById('panel-hod-actions');
+
+    const title = document.getElementById('persona-title');
+    const desc = document.getElementById('persona-desc');
+    const icon = document.getElementById('persona-icon');
+    const badge = document.getElementById('persona-badge');
+
+    // Controls
+    const btnAuthorSubmit = document.getElementById('btn-author-submit');
+    const btnHodApprove = document.getElementById('btn-hod-approve');
+    const btnHodReturn = document.getElementById('btn-hod-return');
+
+    if (role === 'author') {
+      btnAuthor.className = 'persona-tab px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-md text-label-md font-semibold transition-all';
+      title.textContent = 'Author: Prof. Ananya Sharma';
+      desc.textContent = 'Course Coordinator & Subject Matter Expert (CS302)';
+      icon.textContent = 'edit_note';
+      badge.textContent = 'Editing & Resubmission Persona';
+
+      panelAuthor.classList.remove('opacity-50');
+      panelReviewer.classList.add('opacity-50');
+      panelHod.classList.add('opacity-50');
+
+      btnAuthorSubmit.removeAttribute('disabled');
+      btnAuthorSubmit.className = 'px-4 py-2 rounded bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-2 cursor-pointer shadow-sm';
+
+      btnHodApprove.setAttribute('disabled', 'true');
+      btnHodApprove.className = 'px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed';
+      btnHodReturn.setAttribute('disabled', 'true');
+      btnHodReturn.className = 'px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed';
+
+    } else if (role === 'hod') {
+      btnHod.className = 'persona-tab px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-md text-label-md font-semibold transition-all';
+      title.textContent = 'Head of Department: Prof. S. Sen';
+      desc.textContent = 'Department of Computer Science & Engineering (BOS Chairperson)';
+      icon.textContent = 'verified_user';
+      badge.textContent = 'Terminal Ratification Persona';
+
+      panelHod.classList.remove('opacity-50');
+      panelReviewer.classList.add('opacity-50');
+      panelAuthor.classList.add('opacity-50');
+
+      btnAuthorSubmit.setAttribute('disabled', 'true');
+      btnAuthorSubmit.className = 'px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed';
+
+      btnHodApprove.removeAttribute('disabled');
+      btnHodApprove.className = 'px-4 py-2 rounded bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-2 cursor-pointer shadow-sm';
+      btnHodReturn.removeAttribute('disabled');
+      btnHodReturn.className = 'px-4 py-2 rounded bg-surface-container text-error font-label-md text-label-md flex items-center gap-2 cursor-pointer';
+
+    } else {
+      // Default: Reviewer
+      btnReviewer.className = 'persona-tab px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-md text-label-md font-semibold transition-all';
+      title.textContent = 'Reviewer: Dr. K. Ramanathan';
+      desc.textContent = 'Curriculum Sub-Committee (Autonomous Tier-1 Representative)';
+      icon.textContent = 'rate_review';
+      badge.textContent = 'Full Endorsement Authority';
+
+      panelReviewer.classList.remove('opacity-50');
+      panelAuthor.classList.add('opacity-50');
+      panelHod.classList.add('opacity-50');
+
+      btnAuthorSubmit.setAttribute('disabled', 'true');
+      btnAuthorSubmit.className = 'px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed';
+
+      btnHodApprove.setAttribute('disabled', 'true');
+      btnHodApprove.className = 'px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed';
+      btnHodReturn.setAttribute('disabled', 'true');
+      btnHodReturn.className = 'px-4 py-2 rounded bg-surface-container-highest text-outline font-label-md text-label-md flex items-center gap-2 cursor-not-allowed';
+    }
+  }
+</script></main></div></body></html>

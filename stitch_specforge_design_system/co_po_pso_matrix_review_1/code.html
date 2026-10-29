@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#030712","on-surface":"#f8fafc","surface-container-high":"#1e293b","outline-variant":"#334155","secondary-container":"#0369a1","surface-container-highest":"#27364f","primary":"#f8fafc","primary-container":"#1d4ed8","surface-container":"#111827","surface-variant":"#1e293b","outline":"#64748b","on-primary":"#ffffff","error":"#f87171","error-container":"#450a0a","surface-container-lowest":"#090d16","surface":"#030712","on-surface-variant":"#94a3b8","secondary":"#38bdf8","surface-container-low":"#0d1424"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin":"1rem","margin-desktop":"2rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"code-sm":["JetBrains Mono"],"code-md":["JetBrains Mono"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"code-xs":["JetBrains Mono"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"code-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-[#030712] font-body-md text-body-md text-slate-100 antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-[#090d16] z-40 border-b border-slate-800 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span></div><span class="font-headline-sm text-headline-sm text-white tracking-tight">SpecForge</span><span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-code-xs text-code-xs border border-slate-700">v2.4-OBE</span></div><div class="h-4 w-px bg-slate-800 hidden lg:block"></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-[#0f172a] text-slate-300 border border-slate-800 font-code-sm text-code-sm"><span class="material-symbols-outlined text-[16px] text-slate-400">school</span><span>CS302: Advanced Algorithms &amp; Data Structures • Rev 2.4</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-[#0f172a] border border-slate-800 p-0.5 rounded-lg"><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">Author</button><button class="px-2.5 py-1 font-label-md text-label-md rounded bg-[#1e293b] text-white shadow-sm font-semibold transition-colors" type="button">Reviewer</button><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">HOD</button></div><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-700/60 font-code-xs text-code-xs"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span><span>In Review — 2 Pending Checks</span></div><div class="flex items-center gap-space-xs"><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg border border-slate-700 text-slate-200 bg-[#0f172a] hover:bg-slate-800 transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">save</span><span class="hidden sm:inline">Save Draft</span></button><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg bg-blue-600 text-white hover:bg-blue-500 shadow-sm transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">rule</span><span class="hidden sm:inline">Validate Spec</span></button></div><div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center"><span class="material-symbols-outlined text-slate-200 text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-14 h-[calc(100vh-3.5rem)] w-64 bg-[#090d16] border-r border-slate-800 z-30 flex flex-col justify-between p-space-sm"><div class="flex flex-col gap-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400">Academic Workflow</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-[#131d2e] text-blue-400 font-semibold border-l-2 border-blue-500"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="upload-specification" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">1. Upload</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="course-details" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">2. Spec Overview</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a aria-current="page" class="group flex items-center justify-between px-space-sm py-2 rounded transition-all bg-[#131d2e] text-blue-400 font-semibold border-l-2 border-blue-500" data-path="co-po-mapping" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center font-code-xs text-code-xs">3</span><span class="font-body-sm text-body-sm">3. CO-PO-PSO Map</span></div><span class="w-2 h-2 rounded-full bg-blue-400"></span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="accreditation-checks" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">4</span><span class="font-body-sm text-body-sm">4. Checks &amp; Audit</span></div><span class="px-1.5 py-0.2 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 font-code-xs text-code-xs">2</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="approval-workflow" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">5</span><span class="font-body-sm text-body-sm">5. Workflow Routing</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="export-documents" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">6</span><span class="font-body-sm text-body-sm">6. Export Pack</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a></nav></div><div class="border-t border-slate-800 pt-space-sm px-space-sm flex flex-col gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-slate-400 text-[18px]">domain</span><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold text-white truncate">Dept of CSE</span><span class="font-code-xs text-code-xs text-slate-400">Autonomous Tier-1</span></div></div><a class="flex items-center gap-2 py-1 text-slate-400 hover:text-white font-body-sm text-body-sm transition-colors" data-path="guidelines-support" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span>Faculty Guidelines</span></a></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-14 bg-[#030712] p-space-md lg:p-space-lg"><div class="flex flex-col w-full">
+<!-- Document Master Header -->
+<div class="w-full bg-[#090d16] rounded-xl shadow-lg border border-slate-800/80 p-space-lg mb-space-lg flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300 font-code-xs text-code-xs uppercase tracking-wider">Course Specification</span>
+<span class="px-2 py-0.5 rounded bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 font-code-xs text-code-xs">Tier-1 ABET/NBA Aligned</span>
+<span class="text-slate-400 text-label-sm font-label-sm">Session 2024–2025 • Semester VII</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-white font-semibold tracking-tight">CS-401: Distributed Systems &amp; Cloud Architectures</h1>
+<span class="font-code-sm text-code-sm text-slate-400">(4 Credits • L-T-P: 3-1-0)</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-300 max-w-3xl">
+        Comprehensive syllabus mapping verifying Outcome-Based Education (OBE) compliance, cognitive attainment metrics, and continuous department audit standards.
+      </p>
+</div>
+<!-- Reviewer Toolbar -->
+<div class="flex flex-wrap items-center gap-2 xl:self-end">
+<div class="flex items-center rounded-lg bg-[#0f172a] border border-slate-800 p-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 font-label-md text-label-md transition-all shadow-none" id="toggle-filter">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Filter</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1e293b] text-white shadow-sm font-label-md text-label-md transition-all" id="toggle-blooms">
+<span class="material-symbols-outlined text-[16px] text-cyan-400">psychology</span>
+<span>Bloom's Taxonomy</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 font-label-md text-label-md transition-all shadow-none" id="toggle-justifications">
+<span class="material-symbols-outlined text-[16px]">notes</span>
+<span>Justifications</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 font-label-md text-label-md shadow-md transition-all" id="btn-run-validation">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Run Validation Engine</span>
+</button>
+</div>
+</div>
+<!-- Main Bento Grid (Matrix & Validation Drawer) -->
+<div class="grid grid-cols-1 2xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Center Primary Canvas (8 cols on 2xl) -->
+<div class="2xl:col-span-8 flex flex-col gap-space-lg w-full">
+<!-- Course Learning Outcomes (COs) Card -->
+<section class="bg-[#090d16] rounded-xl shadow-lg border border-slate-800/80 p-space-md lg:p-space-lg">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b border-slate-800/80">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-blue-950 border border-blue-800 text-blue-400 flex items-center justify-center font-code-xs text-code-xs font-semibold">CO</span>
+<h2 class="font-headline-sm text-headline-sm text-white">Course Learning Outcomes (COs) Taxonomy</h2>
+</div>
+<span class="font-code-xs text-code-xs text-slate-400">5 Prescribed Outcomes</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- CO 1 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-[#0f172a] border border-slate-800/80 hover:border-slate-700 hover:bg-[#131d2e] transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-white font-code-sm text-code-sm font-semibold">CO1</span>
+<div>
+<p class="font-body-md text-body-md text-white font-medium">Analyze distributed consensus protocols, safety guarantees, and state-machine replication.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-cyan-300 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                    Cognitive: Level 4 (Analyze)
+                  </span>
+<span class="text-slate-600 font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-slate-400">Direct Assessment: Mid-term Exam (40%)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-700/60 text-emerald-300 font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                Valid
+              </span>
+</div>
+</div>
+<!-- CO 2 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-[#0f172a] border border-slate-800/80 hover:border-slate-700 hover:bg-[#131d2e] transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-white font-code-sm text-code-sm font-semibold">CO2</span>
+<div>
+<p class="font-body-md text-body-md text-white font-medium">Evaluate Byzantine fault tolerance and quorum slicing mechanisms in partition scenarios.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-cyan-300 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                    Cognitive: Level 5 (Evaluate)
+                  </span>
+<span class="text-slate-600 font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-slate-400">Direct Assessment: Seminar &amp; Term Quiz</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-700/60 text-emerald-300 font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                Valid
+              </span>
+</div>
+</div>
+<!-- CO 3 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-[#0f172a] border border-slate-800/80 hover:border-slate-700 hover:bg-[#131d2e] transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-white font-code-sm text-code-sm font-semibold">CO3</span>
+<div>
+<p class="font-body-md text-body-md text-white font-medium">Implement Raft leader election and log replication services in concurrent Go routines.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-cyan-300 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                    Cognitive: Level 3 (Apply)
+                  </span>
+<span class="text-slate-600 font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-slate-400">Direct Assessment: Lab Milestone 1 &amp; 2</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-amber-950/80 border border-amber-700/60 text-amber-300 font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-amber-400">warning</span>
+                Missing PO5 Link
+              </span>
+</div>
+</div>
+<!-- CO 4 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-[#0f172a] border border-slate-800/80 hover:border-slate-700 hover:bg-[#131d2e] transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-white font-code-sm text-code-sm font-semibold">CO4</span>
+<div>
+<p class="font-body-md text-body-md text-white font-medium">Design serverless microservices with automated horizontal pod autoscaling on cloud infrastructures.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-cyan-300 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                    Cognitive: Level 6 (Create)
+                  </span>
+<span class="text-slate-600 font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-slate-400">Direct Assessment: Cloud Capstone Project</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-700/60 text-emerald-300 font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                Valid
+              </span>
+</div>
+</div>
+<!-- CO 5 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-[#0f172a] border border-slate-800/80 hover:border-slate-700 hover:bg-[#131d2e] transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-white font-code-sm text-code-sm font-semibold">CO5</span>
+<div>
+<p class="font-body-md text-body-md text-white font-medium">Appraise privacy implications, ethical compliance, and SLA guarantees in federated cloud tenancy.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-cyan-300 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                    Cognitive: Level 5 (Evaluate)
+                  </span>
+<span class="text-slate-600 font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-slate-400">Direct Assessment: Case Study Defense</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-rose-950 border border-rose-800 text-rose-300 font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">error</span>
+                Rubric Detached
+              </span>
+</div>
+</div>
+</div>
+</section>
+<!-- CO-PO-PSO Alignment Matrix Table Card -->
+<section class="bg-[#090d16] rounded-xl shadow-lg border border-slate-800/80 p-space-md lg:p-space-lg overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm border-b border-slate-800/80 mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-blue-600 text-white flex items-center justify-center font-code-xs text-code-xs shadow-sm">
+<span class="material-symbols-outlined text-[14px]">unfold_more_double</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-white font-semibold">Articulation Matrix (CO-PO-PSO)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-slate-400 mt-0.5">
+              Click cell tags to cycle mapping correlation: <span class="font-code-xs text-code-xs text-cyan-400 font-semibold">– (None) → 1 (Low) → 2 (Medium) → 3 (High)</span>
+</p>
+</div>
+<div class="flex items-center gap-2 font-code-xs text-code-xs self-start sm:self-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#0f172a] border border-slate-800 text-cyan-300">
+              Target Threshold: ≥ 2.00
+            </span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto pb-2">
+<table class="w-full text-left border-collapse min-w-[760px]" id="alignment-matrix">
+<thead>
+<tr class="bg-[#0f172a] text-slate-300 font-code-sm text-code-sm border-b border-slate-800">
+<th class="p-2.5 font-semibold text-white rounded-l-lg w-20">Outcome</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO1: Engineering Knowledge">PO1</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO2: Problem Analysis">PO2</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO3: Design &amp; Development">PO3</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO4: Investigations of Complex Problems">PO4</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO5: Modern Tool Usage">PO5</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO8: Ethics &amp; Professionalism">PO8</th>
+<th class="p-2.5 font-semibold text-center w-14 bg-[#141d2f]" title="PSO1: Distributed Systems Engineering">PSO1</th>
+<th class="p-2.5 font-semibold text-center w-14 bg-[#141d2f]" title="PSO2: Cloud Platforms &amp; Scalability">PSO2</th>
+<th class="p-2.5 font-semibold text-right rounded-r-lg w-20 text-white">Row Avg</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-800/80 font-body-sm text-body-sm">
+<!-- Row CO1 -->
+<tr class="hover:bg-[#0f172a]/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-white">
+<div class="flex items-center gap-1.5">
+<span>CO1</span>
+<span class="text-[10px] px-1 rounded bg-slate-800 text-slate-300 border border-slate-700">L4</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-[#0f172a] border border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white transition-colors" data-val="1">1</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-slate-600 hover:bg-slate-800 hover:text-slate-300 transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-white">2.28</td>
+</tr>
+<!-- Row CO2 -->
+<tr class="hover:bg-[#0f172a]/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-white">
+<div class="flex items-center gap-1.5">
+<span>CO2</span>
+<span class="text-[10px] px-1 rounded bg-slate-800 text-slate-300 border border-slate-700">L5</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-slate-600 hover:bg-slate-800 hover:text-slate-300 transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-slate-600 hover:bg-slate-800 hover:text-slate-300 transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-[#0f172a] border border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white transition-colors" data-val="1">1</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-white">2.50</td>
+</tr>
+<!-- Row CO3 -->
+<tr class="hover:bg-[#0f172a]/60 transition-colors bg-[#090d16]">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-white">
+<div class="flex items-center gap-1.5">
+<span>CO3</span>
+<span class="text-[10px] px-1 rounded bg-slate-800 text-slate-300 border border-slate-700">L3</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center">
+<!-- Highlighted Warning Cell -->
+<button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-amber-950/80 border border-amber-700 text-amber-300 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="-" title="Should map to PO5 for Go Tooling">-</button>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-slate-600 hover:bg-slate-800 hover:text-slate-300 transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-white">2.50</td>
+</tr>
+<!-- Row CO4 -->
+<tr class="hover:bg-[#0f172a]/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-white">
+<div class="flex items-center gap-1.5">
+<span>CO4</span>
+<span class="text-[10px] px-1 rounded bg-slate-800 text-slate-300 border border-slate-700">L6</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-slate-600 hover:bg-slate-800 hover:text-slate-300 transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-white">2.71</td>
+</tr>
+<!-- Row CO5 -->
+<tr class="hover:bg-[#0f172a]/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-white">
+<div class="flex items-center gap-1.5">
+<span>CO5</span>
+<span class="text-[10px] px-1 rounded bg-slate-800 text-slate-300 border border-slate-700">L5</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-[#0f172a] border border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white transition-colors" data-val="1">1</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-slate-600 hover:bg-slate-800 hover:text-slate-300 transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-slate-600 hover:bg-slate-800 hover:text-slate-300 transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-blue-900/60 border border-blue-700/60 text-blue-200 font-semibold hover:bg-blue-600 hover:text-white transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-[#0f172a] border border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white transition-colors" data-val="1">1</button></td>
+<td class="p-2 text-center bg-[#131d2e]/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors" data-val="2">2</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-white">1.83</td>
+</tr>
+</tbody>
+<!-- Table Footer Summary -->
+<tfoot class="border-t border-slate-800 bg-[#0f172a] font-code-sm text-code-sm">
+<tr>
+<td class="p-2.5 font-semibold text-white">Column Mean</td>
+<td class="p-2.5 text-center font-semibold text-white">2.20</td>
+<td class="p-2.5 text-center font-semibold text-white">2.80</td>
+<td class="p-2.5 text-center font-semibold text-white">2.50</td>
+<td class="p-2.5 text-center font-semibold text-white">2.40</td>
+<td class="p-2.5 text-center font-semibold text-slate-300">2.00</td>
+<td class="p-2.5 text-center font-semibold text-white">3.00</td>
+<td class="p-2.5 text-center font-semibold text-white bg-[#131d2e]">2.40</td>
+<td class="p-2.5 text-center font-semibold text-white bg-[#131d2e]">2.00</td>
+<td class="p-2.5 text-right font-semibold text-white">2.36</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-space-sm text-slate-400 font-code-xs text-code-xs border-t border-slate-800">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-blue-900 border border-blue-700"></span> 3: Substantial</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-slate-800 border border-slate-700"></span> 2: Moderate</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-[#0f172a] border border-slate-800"></span> 1: Slight</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-[#030712] border border-slate-800"></span> –: No Correlation</span>
+</div>
+<span class="text-slate-400">NBA Manual Criteria 3.1 Validation Met (Overall Index: 2.36)</span>
+</div>
+</section>
+<!-- Revision Notes & Decision Approval Bar -->
+<section class="bg-[#090d16] rounded-xl shadow-lg border border-slate-800/80 p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-slate-800 border border-slate-700 text-cyan-400 flex items-center justify-center font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[14px]">rate_review</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-white font-semibold">Reviewer Assessment &amp; Routing</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-[#0f172a] border border-slate-800 text-slate-300 font-code-xs text-code-xs">Assigned: Dr. A. Sharma (Peer Lead)</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400" for="reviewer-notes">Observations / Remediation Notes</label>
+<textarea class="w-full p-space-sm rounded-lg bg-[#0f172a] border border-slate-800 text-white font-body-md text-body-md focus:border-blue-500 focus:bg-[#131d2e] outline-none transition-all placeholder:text-slate-500" id="reviewer-notes" placeholder="Enter academic feedback or justification remarks for department syllabus board..." rows="3"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-[#0f172a] border border-slate-800 text-slate-200 hover:bg-slate-800 font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Audit Trail (v2.3 → v2.4)</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-[#0f172a] border border-slate-800 text-slate-200 hover:bg-slate-800 font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Draft NBA Self-Study PDF</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-rose-950/80 border border-rose-800 text-rose-300 hover:bg-rose-900 font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">assignment_return</span>
+<span>Request Revisions</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 font-label-md text-label-md shadow-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Recommend to HOD</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Drawer: Validation Engine & Accreditation Audit Checks (4 cols on 2xl) -->
+<div class="2xl:col-span-4 flex flex-col gap-space-md w-full">
+<!-- Accreditation & OBE Audit Drawer Card -->
+<div class="bg-[#090d16] rounded-xl shadow-lg border border-slate-800/80 p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-blue-600 text-white flex items-center justify-center font-code-xs text-code-xs shadow-sm">
+<span class="material-symbols-outlined text-[14px]">rule</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-white font-semibold">Accreditation Audit Engine</h3>
+</div>
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-800 text-cyan-300 font-semibold">1 Alert • 1 Error</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-300">
+          Live automated checks run against autonomous tier-1 engineering curriculum guidelines.
+        </p>
+<!-- Status Cards Stack -->
+<div class="flex flex-col gap-3">
+<!-- Check 1: Passed -->
+<div class="p-3.5 rounded-lg bg-[#0f172a] border border-slate-800 flex flex-col gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-white">Credit Breakdown Consistency</span>
+<span class="font-body-sm text-body-sm text-slate-300">L-T-P (3-1-0) matches standard contact hours allocation of 4 credits.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800">
+<span class="font-code-xs text-code-xs text-slate-400">Automated Rule: CR-01</span>
+<span class="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-800 text-emerald-300 font-code-xs text-code-xs">Verified</span>
+</div>
+</div>
+<!-- Check 2: Warning -->
+<div class="p-3.5 rounded-lg bg-[#141b2b] border border-amber-900/60 flex flex-col gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-amber-400 text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-amber-200">CO3 Lacks PO5 Tool Correlation</span>
+<span class="font-body-sm text-body-sm text-slate-300">Outcome involves Go concurrence implementation &amp; distributed testing, yet PO5 (Modern Tool Usage) is marked unmapped '–'.</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-1 border-t border-slate-800/80">
+<button class="px-2.5 py-1 rounded bg-amber-950 border border-amber-700/80 text-amber-200 hover:bg-amber-900 font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1" id="btn-fix-po5">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
+                Auto-map PO5 → '2'
+              </button>
+<button class="px-2.5 py-1 rounded bg-transparent hover:bg-slate-800 text-slate-400 hover:text-slate-200 font-label-sm text-label-sm transition-all">
+                Dismiss
+              </button>
+</div>
+</div>
+<!-- Check 3: Red Error -->
+<div class="p-3.5 rounded-lg bg-rose-950/40 border border-rose-900/80 flex flex-col gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-rose-400 text-[20px] shrink-0 mt-0.5">error</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-rose-300">CO5 Continuous Assessment Detached</span>
+<span class="font-body-sm text-body-sm text-rose-200/90">CO5 (Appraise cloud ethics &amp; SLA) does not have an active rubric linked in the Continuous Internal Evaluation (CIE) matrix.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-rose-900/60">
+<button class="px-2.5 py-1 rounded bg-rose-700 text-white hover:bg-rose-600 font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                Attach Case Study Rubric
+              </button>
+<span class="font-code-xs text-code-xs text-rose-300 font-medium">Blocking</span>
+</div>
+</div>
+</div>
+<!-- Inline Reviewer Discussion Snippet -->
+<div class="pt-2 flex flex-col gap-2 border-t border-slate-800/80">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400">Thread Activity</span>
+<span class="font-code-xs text-code-xs text-cyan-400 font-medium">1 unread</span>
+</div>
+<div class="p-3 rounded-lg bg-[#0f172a] border border-slate-800 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-blue-600 text-white font-code-xs text-code-xs flex items-center justify-center font-bold">AS</div>
+<span class="font-label-md text-label-md font-medium text-white">Dr. A. Sharma (Reviewer)</span>
+</div>
+<span class="font-code-xs text-code-xs text-slate-400">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-300">
+              “Please ensure the PSO2 alignment for CO4 reflects the updated Kubernetes container orchestration modules finalized in the 2024 Board of Studies.”
+            </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="text-cyan-400 hover:text-cyan-300 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">reply</span> Reply to Peer
+              </button>
+<span class="text-slate-600">•</span>
+<button class="text-slate-400 hover:text-white font-label-sm text-label-sm">Mark Resolved</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Cognitive Balance Metric Visual Card -->
+<div class="bg-[#090d16] rounded-xl shadow-lg border border-slate-800/80 p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-white font-semibold">Bloom's Level Spread</span>
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-cyan-300">Higher Cognitive &gt; 60%</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-300">
+          Distribution across 5 outcomes fulfills autonomous senior semester expectations.
+        </p>
+<!-- Cognitive Distribution Bars -->
+<div class="flex flex-col gap-2 pt-1 font-code-xs text-code-xs">
+<div class="flex items-center justify-between">
+<span class="text-slate-300">L3 (Apply) — 20%</span>
+<span class="text-white font-semibold">1 outcome</span>
+</div>
+<div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+<div class="h-full bg-sky-500 rounded-full" style="width: 20%;"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-slate-300">L4 (Analyze) — 20%</span>
+<span class="text-white font-semibold">1 outcome</span>
+</div>
+<div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+<div class="h-full bg-cyan-400 rounded-full" style="width: 20%;"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-slate-300">L5 (Evaluate) — 40%</span>
+<span class="text-white font-semibold">2 outcomes</span>
+</div>
+<div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 40%;"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-slate-300">L6 (Create) — 20%</span>
+<span class="text-white font-semibold">1 outcome</span>
+</div>
+<div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+<div class="h-full bg-indigo-400 rounded-full" style="width: 20%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-interactions Script -->
+<script>
+    (function initMatrixInteractivity() {
+      const cycleValues = ['-', '1', '2', '3'];
+      const cellButtons = document.querySelectorAll('.matrix-cell');
+
+      cellButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const currentVal = this.getAttribute('data-val') || '-';
+          const currentIndex = cycleValues.indexOf(currentVal);
+          const nextIndex = (currentIndex + 1) % cycleValues.length;
+          const nextVal = cycleValues[nextIndex];
+
+          this.setAttribute('data-val', nextVal);
+          this.textContent = nextVal;
+
+          // Dynamically adjust color tokens based on value
+          this.classList.remove('bg-blue-900/60', 'border-blue-700/60', 'text-blue-200', 'bg-slate-800', 'border-slate-700', 'text-slate-200', 'bg-[#0f172a]', 'border-slate-800', 'text-slate-400', 'text-slate-600', 'bg-amber-950/80', 'border-amber-700', 'text-amber-300');
+
+          if (nextVal === '3') {
+            this.classList.add('bg-blue-900/60', 'border', 'border-blue-700/60', 'text-blue-200', 'font-semibold');
+          } else if (nextVal === '2') {
+            this.classList.add('bg-slate-800', 'border', 'border-slate-700', 'text-slate-200', 'font-medium');
+          } else if (nextVal === '1') {
+            this.classList.add('bg-[#0f172a]', 'border', 'border-slate-800', 'text-slate-400');
+          } else {
+            this.classList.add('text-slate-600');
+          }
+        });
+      });
+
+      // Quick fix PO5 trigger
+      const fixPo5Btn = document.getElementById('btn-fix-po5');
+      if (fixPo5Btn) {
+        fixPo5Btn.addEventListener('click', function() {
+          const row3po5 = document.querySelector('tr:nth-child(3) td:nth-child(6) button');
+          if (row3po5) {
+            row3po5.setAttribute('data-val', '2');
+            row3po5.textContent = '2';
+            row3po5.className = 'matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-blue-600 hover:text-white transition-colors';
+            fixPo5Btn.closest('.p-3.5').style.display = 'none';
+          }
+        });
+      }
+
+      // Run Validation feedback
+      const runValidation = document.getElementById('btn-run-validation');
+      if (runValidation) {
+        runValidation.addEventListener('click', function() {
+          const original = this.innerHTML;
+          this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">autorenew</span> Running Checks...';
+          setTimeout(() => {
+            this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span> Audit Refreshed';
+            setTimeout(() => {
+              this.innerHTML = original;
+            }, 1800);
+          }, 600);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

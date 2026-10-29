@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#030712","on-surface":"#f8fafc","surface-container-high":"#1e293b","outline-variant":"#334155","secondary-container":"#0369a1","surface-container-highest":"#27364f","primary":"#f8fafc","primary-container":"#1d4ed8","surface-container":"#111827","surface-variant":"#1e293b","outline":"#64748b","on-primary":"#ffffff","error":"#f87171","error-container":"#450a0a","surface-container-lowest":"#090d16","surface":"#030712","on-surface-variant":"#94a3b8","secondary":"#38bdf8","surface-container-low":"#0d1424"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin":"1rem","margin-desktop":"2rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"code-sm":["JetBrains Mono"],"code-md":["JetBrains Mono"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"code-xs":["JetBrains Mono"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"code-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-[#030712] font-body-md text-body-md text-slate-100 antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-[#090d16] z-40 border-b border-slate-800 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-[#081b2e] border border-[#173454] flex items-center justify-center shadow-sm shrink-0 p-1"><svg class="w-full h-full" fill="none" viewbox="0 0 70 70"><path d="M8 8 L38 8 C42 8 45 11 45 15 L45 28 C45 32 42 35 38 35 L8 35 C4 35 1 32 1 28 L1 15 C1 11 4 8 8 8 Z" fill="#38bdf8"></path><circle cx="58" cy="21.5" fill="#60a5fa" r="9"></circle><line stroke="#ffffff" stroke-linecap="round" stroke-width="2.5" x1="45" x2="58" y1="21.5" y2="21.5"></line><circle cx="32" cy="21.5" fill="#081b2e" r="2.5"></circle><path d="M8 43 L22 43 C26 43 29 46 29 50 L29 59 C29 63 26 66 22 66 L8 66 C4 66 1 63 1 59 L1 50 C1 46 4 43 8 43 Z" fill="#1d4ed8"></path><path d="M37 43 L61 43 C65 43 68 46 68 50 L68 59 C68 63 65 66 61 66 L37 66 C33 66 30 63 30 59 L30 50 C30 46 33 43 37 43 Z" fill="#38bdf8"></path></svg></div><div class="flex items-baseline gap-1.5"><span class="font-headline-sm text-headline-sm tracking-tight text-white font-bold">Spec<span class="text-[#38bdf8]">Forge</span></span><span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-code-xs text-code-xs border border-slate-700">v2.4-OBE</span></div></div></div><div class="h-4 w-px bg-slate-800 hidden lg:block"></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-[#0f172a] text-slate-300 border border-slate-800 font-code-sm text-code-sm"><span class="material-symbols-outlined text-[16px] text-slate-400">school</span><span>CS302: Advanced Algorithms &amp; Data Structures • Rev 2.4</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-[#0f172a] border border-slate-800 p-0.5 rounded-lg"><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">Author</button><button class="px-2.5 py-1 font-label-md text-label-md rounded bg-[#1e293b] text-white shadow-sm font-semibold transition-colors" type="button">Reviewer</button><button class="px-2.5 py-1 font-label-md text-label-md rounded text-slate-400 hover:text-white transition-colors" type="button">HOD</button></div><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-700/60 font-code-xs text-code-xs"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span><span>In Review — 2 Pending Checks</span></div><div class="flex items-center gap-space-xs"><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg border border-slate-700 text-slate-200 bg-[#0f172a] hover:bg-slate-800 transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">save</span><span class="hidden sm:inline">Save Draft</span></button><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg bg-blue-600 text-white hover:bg-blue-500 shadow-sm transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">rule</span><span class="hidden sm:inline">Validate Spec</span></button></div><div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center"><span class="material-symbols-outlined text-slate-200 text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-14 h-[calc(100vh-3.5rem)] w-64 bg-[#090d16] border-r border-slate-800 z-30 flex flex-col justify-between p-space-sm"><div class="flex flex-col gap-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400">Academic Workflow</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-[#131d2e] text-blue-400 font-semibold border-l-2 border-blue-500"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="upload-specification" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">1. Upload</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="course-details" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">2. Spec Overview</span></div><span class="font-code-xs text-code-xs text-slate-500">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="co-po-mapping" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center font-code-xs text-code-xs">3</span><span class="font-body-sm text-body-sm">3. CO-PO-PSO Map</span></div><span class="w-2 h-2 rounded-full bg-blue-400"></span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="accreditation-checks" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">4</span><span class="font-body-sm text-body-sm">4. Checks &amp; Audit</span></div><span class="px-1.5 py-0.2 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 font-code-xs text-code-xs">2</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="approval-workflow" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">5</span><span class="font-body-sm text-body-sm">5. Workflow Routing</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all" data-path="export-documents" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 flex items-center justify-center font-code-xs text-code-xs">6</span><span class="font-body-sm text-body-sm">6. Export Pack</span></div><span class="font-code-xs text-code-xs text-slate-500">—</span></a></nav></div><div class="border-t border-slate-800 pt-space-sm px-space-sm flex flex-col gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-slate-400 text-[18px]">domain</span><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold text-white truncate">Dept of CSE</span><span class="font-code-xs text-code-xs text-slate-400">Autonomous Tier-1</span></div></div><a class="flex items-center gap-2 py-1 text-slate-400 hover:text-white font-body-sm text-body-sm transition-colors" data-path="guidelines-support" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span>Faculty Guidelines</span></a></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-14 bg-[#030712] p-space-md lg:p-space-lg"><div class="flex flex-col w-full">
+<!-- Interactive Style Sync for Persistent Navigation (Highlights Step 6 Active State) -->
+<script>
+    (function syncStepSixSidebar() {
+      try {
+        const nav = document.querySelector('nav[data-active-classes]');
+        if (!nav) return;
+        const links = nav.querySelectorAll('a[data-path]');
+        links.forEach((link, idx) => {
+          const path = link.getAttribute('data-path');
+          if (idx < 5) {
+            // Steps 1 to 5: Set to Completed (Checkmark + Done tag)
+            const badge = link.querySelector('div > span:first-child');
+            if (badge) {
+              badge.className = 'w-5 h-5 rounded-full bg-surface-container-high text-secondary flex items-center justify-center font-label-sm text-label-sm';
+              badge.innerHTML = '<span class="material-symbols-outlined text-[13px]">check</span>';
+            }
+            const statusTag = link.querySelector(':scope > span:last-child');
+            if (statusTag) {
+              statusTag.className = 'font-label-sm text-label-sm text-outline';
+              statusTag.textContent = 'Done';
+            }
+            link.classList.remove('bg-[#131d2e]', 'text-secondary', 'font-semibold', 'border-l-2', 'border-secondary');
+            link.classList.add('text-on-surface-variant');
+          } else if (path === 'export-documents' || idx === 5) {
+            // Step 6: Set to Active State
+            link.className = 'group flex items-center justify-between px-space-sm py-2 rounded bg-surface-container-high text-secondary font-semibold transition-all shadow-sm';
+            const badge = link.querySelector('div > span:first-child');
+            if (badge) {
+              badge.className = 'w-5 h-5 rounded-full bg-secondary text-surface-container-lowest flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm';
+              badge.textContent = '6';
+            }
+            const label = link.querySelector('span.font-body-sm');
+            if (label) {
+              label.className = 'font-body-sm text-body-sm font-semibold text-on-surface';
+            }
+            const indicator = link.querySelector(':scope > span:last-child');
+            if (indicator) {
+              indicator.className = 'w-2 h-2 rounded-full bg-secondary animate-pulse';
+              indicator.textContent = '';
+            }
+          }
+        });
+
+        // Update Top Navigation Bar Status Badge if present in App Shell
+        const topBadges = document.querySelectorAll('header span');
+        topBadges.forEach(b => {
+          if (b.textContent && b.textContent.includes('In Review')) {
+            const container = b.closest('div');
+            if (container) {
+              container.className = 'hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm shadow-sm';
+              container.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Ready for Export • 100% Validated</span>';
+            }
+          }
+        });
+      } catch (e) {
+        // Safe failover
+      }
+    })();
+  </script>
+<!-- Editorial Section Header Bar -->
+<header class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm tracking-widest uppercase font-semibold">
+          STEP 06 OF 06 • AUTONOMOUS OBE EXPORT PACK
+        </span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">
+          NBA TIER-1 COMPLIANCE VERIFIED
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Course Specification Export &amp; Institutional Dossier
+      </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+        Generate statutory NBA Tier-1 accreditation packs, print-ready institutional course catalogs, and raw machine-readable JSON manifests for Board of Studies (BOS) curriculum archiving.
+      </p>
+</div>
+<!-- Live Document Toolbar & Controls -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-1.5 rounded-xl shadow-sm self-start lg:self-end">
+<div class="flex items-center px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">zoom_in</span>
+<span class="text-on-surface font-semibold" id="zoomLabel">100%</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center" id="prevPageBtn" title="Previous Page">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface font-medium px-1">Page 1 of 3</span>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center" id="nextPageBtn" title="Next Page">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Rev: v2.4-FINAL</span>
+</div>
+</div>
+</header>
+<!-- Two-Column Asymmetric Workspace -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Realistic Crisp Institutional White Paper Sheet (Cols 1-8 / 66%) -->
+<section class="xl:col-span-8 flex flex-col items-center">
+<!-- Paper Frame Container -->
+<div class="w-full max-w-[820px] bg-white text-slate-900 rounded shadow-2xl p-6 sm:p-10 lg:p-12 transition-all duration-200 select-text" id="paperCanvas">
+<!-- University Academic Crest and Title Block Header -->
+<div class="flex flex-col items-center text-center pb-5 mb-5 bg-slate-50/60 p-4 rounded">
+<div class="flex items-center justify-between w-full mb-3 px-2">
+<!-- Institutional Emblem / Seal SVG -->
+<div class="w-14 h-14 rounded-full bg-slate-900 flex items-center justify-center shadow-sm shrink-0 p-2">
+<svg class="w-full h-full text-white" fill="currentColor" viewbox="0 0 40 40">
+<path d="M20 2L4 9v11c0 9.8 6.8 19 16 21 9.2-2 16-11.2 16-21V9L20 2zm0 5l12 5.3v8c0 7.3-5.1 14.1-12 15.6-6.9-1.5-12-8.3-12-15.6v-8L20 7z"></path>
+<path d="M19 12h2v10h-2zm0 12h2v2h-2z"></path>
+</svg>
+</div>
+<div class="flex flex-col text-center px-4">
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-wide text-slate-900 font-bold">
+                National Institute of Technology &amp; Advanced Studies
+              </h2>
+<span class="text-xs uppercase tracking-widest text-slate-600 font-medium mt-0.5">
+                (Autonomous Institution Affiliated to Central Technical University • Accredited 'A++' by NAAC)
+              </span>
+<span class="text-xs font-semibold text-slate-800 mt-0.5">
+                Department of Computer Science &amp; Engineering
+              </span>
+</div>
+<!-- Accreditation Stamp Pill -->
+<div class="shrink-0 px-2 py-1 bg-slate-200 rounded text-center">
+<span class="block text-[9px] uppercase font-bold text-slate-700 tracking-wider">NBA Tier-1</span>
+<span class="block text-[10px] font-bold text-slate-900">Approved</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-[1.5px] my-1.5"></div>
+<div class="flex flex-col items-center gap-0.5 mt-1">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-700">
+              Regulation 2024 (CBCS / Outcome-Based Education Framework)
+            </span>
+<span class="text-base font-bold text-slate-900 tracking-tight">
+              STATUTORY COURSE SPECIFICATION &amp; ACCREDITATION DOSSIER
+            </span>
+</div>
+</div>
+<!-- Course Metadata Box -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-3 bg-slate-100 rounded text-xs text-slate-800 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-500">Course Code</span>
+<span class="font-bold text-slate-900">CS-401</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-500">Credits (L-T-P)</span>
+<span class="font-bold text-slate-900">4.0 (3 - 0 - 2)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-500">Semester / Term</span>
+<span class="font-bold text-slate-900">VII Semester, B.Tech</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-500">Academic Year</span>
+<span class="font-bold text-slate-900">2024 – 2025</span>
+</div>
+<div class="col-span-2 sm:col-span-3 flex flex-col mt-1">
+<span class="text-[10px] uppercase font-bold text-slate-500">Course Title</span>
+<span class="font-bold text-slate-900">Distributed Systems &amp; Cloud Architectures</span>
+</div>
+<div class="flex flex-col mt-1">
+<span class="text-[10px] uppercase font-bold text-slate-500">Total Contact Hours</span>
+<span class="font-bold text-slate-900">70 Hours (42 Th + 28 Lab)</span>
+</div>
+<div class="col-span-2 sm:col-span-4 flex flex-col mt-1 pt-1 bg-slate-200/50 p-1.5 rounded">
+<span class="text-[10px] uppercase font-bold text-slate-500">Prerequisites</span>
+<span class="text-[11px] text-slate-800">CS-204 Operating Systems, CS-301 Computer Networks, CS-206 Data Structures</span>
+</div>
+</div>
+<!-- Section 1: Course Overview & Preamble -->
+<section class="mb-6">
+<div class="flex items-center gap-2 mb-2 pb-1 bg-slate-100 px-2 py-1 rounded">
+<span class="text-xs font-bold text-slate-900 uppercase tracking-wider">1.0 Course Preamble &amp; Architectural Scope</span>
+</div>
+<p class="text-xs text-slate-700 leading-relaxed text-justify mb-2">
+            This course delivers comprehensive foundational and advanced principles of distributed computing systems, modern cloud orchestration topologies, and decentralized data consensus. Students investigate fundamental trade-offs formalized by the CAP theorem, Byzantine fault tolerance, vector time, and Paxos/Raft consensus algorithms. Practical emphasis encompasses building containerized microservices, horizontal auto-scaling pipelines, and resilient distributed storage engines using cloud-native runtime environments.
+          </p>
+</section>
+<!-- Section 2: Course Outcomes (COs) Table -->
+<section class="mb-6">
+<div class="flex items-center justify-between mb-2 pb-1 bg-slate-100 px-2 py-1 rounded">
+<span class="text-xs font-bold text-slate-900 uppercase tracking-wider">2.0 Course Outcomes (COs)</span>
+<span class="text-[10px] text-slate-500 font-semibold">Bloom's Revised Taxonomy (Cognitive Level)</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs border-collapse">
+<thead>
+<tr class="bg-slate-800 text-white text-[11px]">
+<th class="p-2 font-bold w-14">CO ID</th>
+<th class="p-2 font-bold">Course Outcome Statement</th>
+<th class="p-2 font-bold w-24 text-center">Bloom's Level</th>
+<th class="p-2 font-bold w-24 text-center">Attainment Min.</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 text-[11.5px] text-slate-800">
+<tr class="hover:bg-slate-50">
+<td class="p-2 font-bold text-slate-900">CO-1</td>
+<td class="p-2">Formalize distributed clock synchronization, logical ordering, and mutual exclusion mechanisms across asynchronous networks.</td>
+<td class="p-2 text-center font-bold text-slate-700 bg-slate-50">K3 (Apply)</td>
+<td class="p-2 text-center font-semibold text-emerald-800">70% Target</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-2 font-bold text-slate-900">CO-2</td>
+<td class="p-2">Analyze consensus protocols (Raft, Multi-Paxos) and state machine replication under partition faults and latency degradation.</td>
+<td class="p-2 text-center font-bold text-slate-700 bg-slate-50">K4 (Analyze)</td>
+<td class="p-2 text-center font-semibold text-emerald-800">70% Target</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-2 font-bold text-slate-900">CO-3</td>
+<td class="p-2">Design highly resilient, horizontally scalable microservice topologies adhering to the CAP &amp; PACELC formal bounds.</td>
+<td class="p-2 text-center font-bold text-slate-700 bg-slate-50">K5 (Evaluate)</td>
+<td class="p-2 text-center font-semibold text-emerald-800">70% Target</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-2 font-bold text-slate-900">CO-4</td>
+<td class="p-2">Construct container-orchestrated cluster deployments with automated failover, health probing, and distributed tracing.</td>
+<td class="p-2 text-center font-bold text-slate-700 bg-slate-50">K6 (Create)</td>
+<td class="p-2 text-center font-semibold text-emerald-800">70% Target</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-2 font-bold text-slate-900">CO-5</td>
+<td class="p-2">Audit cloud data privacy, cryptographic zero-trust architectures, and statutory governance compliance frameworks.</td>
+<td class="p-2 text-center font-bold text-slate-700 bg-slate-50">K4 (Analyze)</td>
+<td class="p-2 text-center font-semibold text-emerald-800">70% Target</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 3: Course Articulation Matrix (CO-PO-PSO Mapping) -->
+<section class="mb-6">
+<div class="flex items-center justify-between mb-2 pb-1 bg-slate-100 px-2 py-1 rounded">
+<span class="text-xs font-bold text-slate-900 uppercase tracking-wider">3.0 Course Articulation Matrix (CO - PO / PSO Correlation)</span>
+<span class="text-[10px] text-slate-600 font-medium">3: Substantial | 2: Moderate | 1: Slight | -: None</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-center text-[10.5px] border-collapse">
+<thead>
+<tr class="bg-slate-800 text-white font-bold">
+<th class="p-1.5 text-left pl-2">CO ID</th>
+<th class="p-1.5">PO1</th>
+<th class="p-1.5">PO2</th>
+<th class="p-1.5">PO3</th>
+<th class="p-1.5">PO4</th>
+<th class="p-1.5">PO5</th>
+<th class="p-1.5">PO6</th>
+<th class="p-1.5">PO7</th>
+<th class="p-1.5">PO8</th>
+<th class="p-1.5">PO9</th>
+<th class="p-1.5">PO10</th>
+<th class="p-1.5">PO11</th>
+<th class="p-1.5 bg-slate-900">PSO1</th>
+<th class="p-1.5 bg-slate-900">PSO2</th>
+<th class="p-1.5 bg-slate-900">PSO3</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 text-slate-800 font-medium">
+<tr class="hover:bg-slate-50">
+<td class="p-1.5 text-left pl-2 font-bold text-slate-900">CO-1</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">1</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">2</td>
+<td class="p-1.5 bg-slate-50 font-bold">1</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-1.5 text-left pl-2 font-bold text-slate-900">CO-2</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">2</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-1.5 text-left pl-2 font-bold text-slate-900">CO-3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">1</td>
+<td class="p-1.5">1</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">2</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-1.5 text-left pl-2 font-bold text-slate-900">CO-4</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">-</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="p-1.5 text-left pl-2 font-bold text-slate-900">CO-5</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">1</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">3</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">2</td>
+<td class="p-1.5">1</td>
+<td class="p-1.5 bg-slate-50 font-bold">2</td>
+<td class="p-1.5 bg-slate-50 font-bold">2</td>
+<td class="p-1.5 bg-slate-50 font-bold">3</td>
+</tr>
+<tr class="bg-slate-100 font-bold text-slate-900">
+<td class="p-1.5 text-left pl-2">Mean</td>
+<td class="p-1.5">2.8</td>
+<td class="p-1.5">2.6</td>
+<td class="p-1.5">2.6</td>
+<td class="p-1.5">2.3</td>
+<td class="p-1.5">2.4</td>
+<td class="p-1.5">2.0</td>
+<td class="p-1.5">1.5</td>
+<td class="p-1.5">3.0</td>
+<td class="p-1.5">2.3</td>
+<td class="p-1.5">2.0</td>
+<td class="p-1.5">1.8</td>
+<td class="p-1.5 bg-slate-200">2.8</td>
+<td class="p-1.5 bg-slate-200">2.6</td>
+<td class="p-1.5 bg-slate-200">2.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 4: Unit-wise Course Syllabus Summary -->
+<section class="mb-6">
+<div class="flex items-center justify-between mb-2 pb-1 bg-slate-100 px-2 py-1 rounded">
+<span class="text-xs font-bold text-slate-900 uppercase tracking-wider">4.0 Unit-wise Modular Syllabus &amp; Lab Practicals</span>
+<span class="text-[10px] text-slate-500 font-semibold">5 Units • 42 Theory Hrs + 28 Lab Hrs</span>
+</div>
+<div class="space-y-2 text-xs">
+<div class="p-2 bg-slate-50 rounded">
+<span class="font-bold text-slate-900">Unit I: Characterization of Distributed Systems &amp; Logical Time (8 Hrs)</span>
+<p class="text-[11px] text-slate-700 mt-0.5">
+                Models of distributed computation, networking endpoints, Lamport timestamps, Vector clocks, Chandy-Lamport global snapshot algorithm, distributed mutual exclusion.
+              </p>
+</div>
+<div class="p-2 bg-slate-50 rounded">
+<span class="font-bold text-slate-900">Unit II: Fault Tolerance &amp; Distributed Consensus (9 Hrs)</span>
+<p class="text-[11px] text-slate-700 mt-0.5">
+                Failure modes, crash stop vs. Byzantine faults, Two-Phase Commit (2PC), Three-Phase Commit (3PC), Paxos algorithm, Raft consensus, leader election, log replication.
+              </p>
+</div>
+<div class="p-2 bg-slate-50 rounded">
+<span class="font-bold text-slate-900">Unit III: Cloud Storage, Partitioning &amp; Consistency Models (9 Hrs)</span>
+<p class="text-[11px] text-slate-700 mt-0.5">
+                CAP theorem and PACELC trade-offs. Consistent hashing, distributed key-value stores (Dynamo, Bigtable), read/write quorums, eventual consistency, CRDTs.
+              </p>
+</div>
+<div class="p-2 bg-slate-50 rounded">
+<span class="font-bold text-slate-900">Unit IV: Cloud Microservices, Containers &amp; Orchestration (8 Hrs)</span>
+<p class="text-[11px] text-slate-700 mt-0.5">
+                Microservices design patterns, API Gateways, gRPC/Protobuf IPC, Docker runtime internals, Kubernetes cluster architecture, Pod scheduling, and ingress control.
+              </p>
+</div>
+<div class="p-2 bg-slate-50 rounded">
+<span class="font-bold text-slate-900">Unit V: Cloud Security, Zero Trust &amp; Laboratory Practicals (8 Hrs + Labs)</span>
+<p class="text-[11px] text-slate-700 mt-0.5">
+                Mutual TLS, OAuth2/OIDC, IAM policy enforcement, zero-trust network boundaries. Laboratory assignments: 10 bench experiments using Go, Docker, and Kubernetes.
+              </p>
+</div>
+</div>
+</section>
+<!-- Section 5: CIE & SEE Examination Scheme -->
+<section class="mb-6">
+<div class="flex items-center justify-between mb-2 pb-1 bg-slate-100 px-2 py-1 rounded">
+<span class="text-xs font-bold text-slate-900 uppercase tracking-wider">5.0 Assessment &amp; Evaluation Scheme (60:40 Statutory Ratio)</span>
+<span class="text-[10px] text-emerald-800 font-bold">100% Normalized</span>
+</div>
+<table class="w-full text-xs text-left border-collapse">
+<thead>
+<tr class="bg-slate-200 text-slate-900 font-bold text-[11px]">
+<th class="p-2">Component Category</th>
+<th class="p-2">Evaluation Method</th>
+<th class="p-2 text-center">Marks</th>
+<th class="p-2 text-center">Weightage</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 text-[11px] text-slate-700">
+<tr>
+<td class="p-2 font-semibold">Continuous Internal Evaluation (CIE)</td>
+<td class="p-2">Mid-Term Tests (30) + Lab Practical Continuous Assessment (20) + Seminars (10)</td>
+<td class="p-2 text-center font-bold">60</td>
+<td class="p-2 text-center font-bold text-slate-900">60%</td>
+</tr>
+<tr>
+<td class="p-2 font-semibold">Semester End Examination (SEE)</td>
+<td class="p-2">Comprehensive 3-Hour Autonomous Board Theory Exam (Evaluated out of 100)</td>
+<td class="p-2 text-center font-bold">40</td>
+<td class="p-2 text-center font-bold text-slate-900">40%</td>
+</tr>
+<tr class="bg-slate-100 font-bold text-slate-900">
+<td class="p-2" colspan="2">Total Statutory Evaluation Weight</td>
+<td class="p-2 text-center">100</td>
+<td class="p-2 text-center text-emerald-800">100% Validated</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Sign-off Institutional Footer Block -->
+<div class="mt-8 pt-6 border-t-2 border-slate-300 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center text-xs">
+<div class="flex flex-col items-center">
+<div class="w-24 h-7 mb-1 flex items-center justify-center font-serif italic text-slate-500 font-semibold text-sm">
+              Ananya Sharma
+            </div>
+<div class="w-full h-0.5 bg-slate-400 mb-1"></div>
+<span class="font-bold text-slate-900">Prof. Ananya Sharma</span>
+<span class="text-[10px] text-slate-600">Course Coordinator / Author</span>
+<span class="text-[9px] text-slate-400 font-mono">Signed: 12-Oct-2024</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-7 mb-1 flex items-center justify-center font-serif italic text-slate-500 font-semibold text-sm">
+              K. Ramanathan
+            </div>
+<div class="w-full h-0.5 bg-slate-400 mb-1"></div>
+<span class="font-bold text-slate-900">Dr. K. Ramanathan</span>
+<span class="text-[10px] text-slate-600">Module Reviewer (CSE BOS)</span>
+<span class="text-[9px] text-slate-400 font-mono">Verified: 14-Oct-2024</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-7 mb-1 flex items-center justify-center font-serif italic text-slate-500 font-semibold text-sm">
+              S. Sen, Ph.D.
+            </div>
+<div class="w-full h-0.5 bg-slate-400 mb-1"></div>
+<span class="font-bold text-slate-900">Prof. S. Sen, Ph.D.</span>
+<span class="text-[10px] text-slate-600">Head of Department (CSE)</span>
+<span class="text-[9px] text-slate-400 font-mono">Approved: 15-Oct-2024</span>
+</div>
+</div>
+<!-- Academic Barcode & Verification Seal -->
+<div class="mt-6 pt-3 flex items-center justify-between text-[9px] text-slate-400 font-mono">
+<span>SHA-256: 4f8a9271c6e180d381bf4829ad30e9c2d • BOS-DOC-REV-2.4</span>
+<span>PAGE 1 OF 3 (COURSE DOSSIER)</span>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Export Actions & Package Controls (Cols 9-12 / 34%) -->
+<aside class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Card 1: Export Actions & Package Controls -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Export &amp; Dispatch</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-semibold">
+            BOS Tier-1
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Select institutional distribution targets. All assets embed verifiable digital cryptographic signatures.
+        </p>
+<!-- Primary High-Impact Export Action -->
+<button class="w-full px-4 py-3 rounded-lg bg-primary-container text-white hover:bg-secondary-container transition-all flex items-center justify-between shadow-lg group" id="printPdfBtn" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">print</span>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold">Print / Save as PDF</span>
+<span class="font-label-sm text-label-sm opacity-90">Statutory Institutional A4 Layout</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/40 font-label-sm text-label-sm uppercase font-semibold">
+            Official A4
+          </span>
+</button>
+<!-- Secondary File Downloads -->
+<div class="flex flex-col gap-2">
+<!-- Button 2: Download HTML -->
+<button class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright transition-all flex items-center justify-between" id="downloadHtmlBtn" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">html</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-semibold">Download HTML Document</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Self-contained stand-alone file</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">.html</span>
+</button>
+<!-- Button 3: Download JSON -->
+<button class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright transition-all flex items-center justify-between" id="downloadJsonBtn" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">code</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-semibold">Download Output File (JSON)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NBA Tier-1 Schema v2.4 Spec</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">.json</span>
+</button>
+</div>
+<!-- Utility Auxiliary Links -->
+<div class="pt-2 flex items-center justify-between">
+<button class="flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-on-surface transition-colors" id="copyLinkBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span>Copy Dossier URL</span>
+</button>
+<button class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" id="emailBosBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Dispatch to BOS Chair</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Export Readiness Checklist Card -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Export Readiness</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-semibold">
+            3 of 3 Verified
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Automated pre-flight compliance audits verified zero formatting or normative deviations.
+        </p>
+<!-- Readiness Checklist Items -->
+<div class="flex flex-col gap-2 mt-1">
+<!-- Check Item 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Template sections complete</span>
+<span class="font-label-sm text-label-sm text-secondary">Pass</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">
+                All 7 statutory sections populated with accredited descriptors and contact hours.
+              </span>
+</div>
+</div>
+<!-- Check Item 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-md text-label-md text-on-surface font-semibold">No leftover sample text</span>
+<span class="font-label-sm text-label-sm text-secondary">0 Found</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">
+                Automated regex scan detected 0 placeholder tags, brackets, or draft annotations.
+              </span>
+</div>
+</div>
+<!-- Check Item 3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Weights total 100%</span>
+<span class="font-label-sm text-label-sm text-secondary">60:40</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">
+                CIE (60%) + SEE (40%) evaluation components strictly normalized and balanced.
+              </span>
+</div>
+</div>
+</div>
+<!-- Audit Cryptographic Hash Stamp -->
+<div class="mt-2 p-2 rounded bg-surface-container-lowest font-label-sm text-label-sm text-outline flex items-center justify-between">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-secondary">fingerprint</span>
+<span class="truncate">SHA256: 4f8a...9c2d</span>
+</div>
+<span class="shrink-0 text-secondary font-semibold">Verified SpecForge v2.4</span>
+</div>
+</div>
+<!-- Card 3: Accreditation Package Metadata & Bundle Content -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Package Manifest</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+            Archival Bundle
+          </span>
+</div>
+<div class="flex flex-col gap-1.5 text-xs text-on-surface-variant mt-1">
+<div class="flex justify-between py-1">
+<span>Framework Standard:</span>
+<span class="text-on-surface font-semibold">Autonomous BOS Tier-1 (Rev 2024)</span>
+</div>
+<div class="flex justify-between py-1">
+<span>Compiled At:</span>
+<span class="text-on-surface font-mono" id="timestampMeta">15-Oct-2024 14:32:09 IST</span>
+</div>
+<div class="flex justify-between py-1">
+<span>Governance Status:</span>
+<span class="text-secondary font-semibold">Approved for Registrar Submission</span>
+</div>
+</div>
+<div class="mt-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-2">Export Pack Inclusions (4 Artifacts):</span>
+<ul class="space-y-1.5 text-xs">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">picture_as_pdf</span>
+<span class="font-body-sm text-body-sm truncate">Formal Autonomous Syllabus (PDF/A)</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">data_object</span>
+<span class="font-body-sm text-body-sm truncate">OBE Attainment &amp; Articulation JSON Matrix</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">history_edu</span>
+<span class="font-body-sm text-body-sm truncate">Curriculum Diff &amp; Version Changelog Ledger</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span class="font-body-sm text-body-sm truncate">Faculty &amp; BOS Sign-off Digital Certificate</span>
+</li>
+</ul>
+</div>
+<!-- Banner Info Callout -->
+<div class="mt-3 p-2.5 rounded bg-surface-container-low flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Ready for institutional registrar ingestion and accreditation record archives.</span>
+</div>
+</div>
+</aside>
+</div>
+<!-- Live Client-Side Micro-interactions for Download & Printing -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Dynamic Date/Time Stamp update
+      const timeElem = document.getElementById('timestampMeta');
+      if (timeElem) {
+        const now = new Date();
+        timeElem.textContent = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' + now.toLocaleTimeString('en-GB') + ' IST';
+      }
+
+      // 2. Print / PDF Button Trigger
+      const printBtn = document.getElementById('printPdfBtn');
+      if (printBtn) {
+        printBtn.addEventListener('click', () => {
+          window.print();
+        });
+      }
+
+      // 3. Download JSON Specification Handler
+      const jsonBtn = document.getElementById('downloadJsonBtn');
+      if (jsonBtn) {
+        jsonBtn.addEventListener('click', () => {
+          const specData = {
+            institution: "National Institute of Technology & Advanced Studies (Autonomous)",
+            department: "Computer Science & Engineering",
+            courseCode: "CS-401",
+            courseTitle: "Distributed Systems & Cloud Architectures",
+            regulation: "Regulation 2024 (CBCS / OBE)",
+            academicYear: "2024-2025",
+            credits: 4.0,
+            contactHours: 70,
+            rubric: { cie: 60, see: 40 },
+            outcomes: [
+              { id: "CO-1", blooms: "K3", threshold: "70%" },
+              { id: "CO-2", blooms: "K4", threshold: "70%" },
+              { id: "CO-3", blooms: "K5", threshold: "70%" },
+              { id: "CO-4", blooms: "K6", threshold: "70%" },
+              { id: "CO-5", blooms: "K4", threshold: "70%" }
+            ],
+            verificationHash: "SHA256:4f8a9271c6e180d381bf4829ad30e9c2d",
+            status: "APPROVED_FINAL"
+          };
+          const blob = new Blob([JSON.stringify(specData, null, 2)], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "CS401-Specification-OBE-v2.4.json";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+      }
+
+      // 4. Download Standalone HTML Document Handler
+      const htmlBtn = document.getElementById('downloadHtmlBtn');
+      if (htmlBtn) {
+        htmlBtn.addEventListener('click', () => {
+          const paperElement = document.getElementById('paperCanvas');
+          if (!paperElement) return;
+          const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CS401 - Course Specification Dossier</title>
+<script src="https://cdn.tailwindcss.com"><\/script>
+</head>
+<body class="bg-slate-100 p-8 flex justify-center">
+  <div class="w-full max-w-[820px] bg-white p-8 shadow-md">
+    ${paperElement.innerHTML}
+  </div>
+</body>
+</html>`;
+          const blob = new Blob([htmlContent], { type: "text/html" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "CS401-Course-Dossier-v2.4.html";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+      }
+
+      // 5. Copy Link Feedback
+      const copyBtn = document.getElementById('copyLinkBtn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          const prevHtml = copyBtn.innerHTML;
+          navigator.clipboard ? navigator.clipboard.writeText(window.location.href) : null;
+          copyBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Link Copied!</span>';
+          setTimeout(() => {
+            copyBtn.innerHTML = prevHtml;
+          }, 2000);
+        });
+      }
+
+      // 6. Email Dispatch Notification
+      const emailBtn = document.getElementById('emailBosBtn');
+      if (emailBtn) {
+        emailBtn.addEventListener('click', () => {
+          const prev = emailBtn.innerHTML;
+          emailBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">done_all</span><span>Queued to BOS</span>';
+          setTimeout(() => {
+            emailBtn.innerHTML = prev;
+          }, 2200);
+        });
+      }
+
+      // 7. Zoom Interactive Toggle
+      let currentZoom = 100;
+      const zoomLabel = document.getElementById('zoomLabel');
+      const paperCanvas = document.getElementById('paperCanvas');
+      if (zoomLabel && paperCanvas) {
+        zoomLabel.parentElement.addEventListener('click', () => {
+          currentZoom = currentZoom === 100 ? 110 : (currentZoom === 110 ? 90 : 100);
+          zoomLabel.textContent = currentZoom + '%';
+          paperCanvas.style.transform = currentZoom === 100 ? 'none' : `scale(${currentZoom / 100})`;
+          paperCanvas.style.transformOrigin = 'top center';
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

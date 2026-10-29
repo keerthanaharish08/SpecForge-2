@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#f8f9ff","on-secondary-fixed-variant":"#264191","on-surface":"#0b1c30","surface-container-high":"#dce9ff","outline-variant":"#c3c6ce","secondary-container":"#8fa7fe","surface-container-highest":"#d3e4fe","on-primary-fixed":"#011d35","on-secondary-fixed":"#00164e","primary":"#001428","on-error-container":"#93000a","on-tertiary-fixed":"#0d1c2e","surface-tint":"#49607c","primary-container":"#0f2942","on-primary-fixed-variant":"#314863","surface-container":"#e5eeff","surface-variant":"#d3e4fe","secondary-fixed-dim":"#b6c4ff","tertiary-fixed":"#d5e3fc","outline":"#74777e","on-error":"#ffffff","secondary-fixed":"#dce1ff","inverse-primary":"#b0c9e8","on-primary":"#ffffff","error":"#ba1a1a","error-container":"#ffdad6","surface-container-lowest":"#ffffff","on-tertiary-container":"#818fa5","primary-fixed-dim":"#b0c9e8","tertiary":"#051325","tertiary-container":"#1a283a","tertiary-fixed-dim":"#b9c7df","surface":"#f8f9ff","on-tertiary-fixed-variant":"#3a485b","on-primary-container":"#7991af","on-surface-variant":"#43474d","secondary":"#4059aa","surface-container-low":"#eff4ff","primary-fixed":"#d1e4ff","surface-bright":"#f8f9ff","on-background":"#0b1c30","inverse-on-surface":"#eaf1ff","on-secondary":"#ffffff","on-secondary-container":"#1d3989","on-tertiary":"#ffffff","inverse-surface":"#213145","surface-dim":"#cbdbf5"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin":"1rem","margin-desktop":"2rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"code-sm":["JetBrains Mono"],"code-md":["JetBrains Mono"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"code-xs":["JetBrains Mono"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"code-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-surface-container-lowest z-40 border-b border-surface-container flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">grid_view</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">SpecForge</span><span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-xs text-code-xs">v2.4-OBE</span></div><div class="h-4 w-px bg-surface-container hidden lg:block"></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-sm text-code-sm"><span class="material-symbols-outlined text-[16px] text-outline">school</span><span>CS302: Advanced Algorithms &amp; Data Structures • Rev 2.4</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container p-0.5 rounded-lg"><button class="px-2.5 py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface transition-colors" type="button">Author</button><button class="px-2.5 py-1 font-label-md text-label-md rounded bg-surface-container-lowest text-primary shadow-sm font-semibold transition-colors" type="button">Reviewer</button><button class="px-2.5 py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface transition-colors" type="button">HOD</button></div><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed border border-secondary-fixed-dim font-code-xs text-code-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>In Review — 2 Pending Checks</span></div><div class="flex items-center gap-space-xs"><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg border border-outline-variant text-on-surface bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">save</span><span class="hidden sm:inline">Save Draft</span></button><button class="px-3 py-1.5 font-label-md text-label-md rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">rule</span><span class="hidden sm:inline">Validate Spec</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-14 h-[calc(100vh-3.5rem)] w-64 bg-surface-container-lowest border-r border-surface-container z-30 flex flex-col justify-between p-space-sm"><div class="flex flex-col gap-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Academic Workflow</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container text-primary font-semibold border-l-2 border-primary"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="upload-specification" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-primary-fixed flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">1. Upload</span></div><span class="font-code-xs text-code-xs text-outline">Done</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="course-details" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-primary-fixed flex items-center justify-center font-code-xs text-code-xs"><span class="material-symbols-outlined text-[14px]">check</span></span><span class="font-body-sm text-body-sm">2. Spec Overview</span></div><span class="font-code-xs text-code-xs text-outline">Done</span></a><a aria-current="page" class="group flex items-center justify-between px-space-sm py-2 rounded transition-all bg-surface-container text-primary font-semibold border-l-2 border-primary" data-path="co-po-mapping" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-code-xs text-code-xs">3</span><span class="font-body-sm text-body-sm">3. CO-PO-PSO Map</span></div><span class="w-2 h-2 rounded-full bg-primary"></span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="accreditation-checks" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-code-xs text-code-xs">4</span><span class="font-body-sm text-body-sm">4. Checks &amp; Audit</span></div><span class="px-1.5 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-xs text-code-xs">2</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="approval-workflow" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-code-xs text-code-xs">5</span><span class="font-body-sm text-body-sm">5. Workflow Routing</span></div><span class="font-code-xs text-code-xs text-outline">—</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="export-documents" href="#"><div class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-code-xs text-code-xs">6</span><span class="font-body-sm text-body-sm">6. Export Pack</span></div><span class="font-code-xs text-code-xs text-outline">—</span></a></nav></div><div class="border-t border-surface-container pt-space-sm px-space-sm flex flex-col gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-[18px]">domain</span><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold text-primary truncate">Dept of CSE</span><span class="font-code-xs text-code-xs text-outline">Autonomous Tier-1</span></div></div><a class="flex items-center gap-2 py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="guidelines-support" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span>Faculty Guidelines</span></a></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-14 bg-surface p-space-md lg:p-space-lg"><div class="flex flex-col w-full">
+<!-- Document Master Header -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-xs text-code-xs uppercase tracking-wider">Course Specification</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-code-xs text-code-xs">Tier-1 ABET/NBA Aligned</span>
+<span class="text-outline text-label-sm font-label-sm">Session 2024–2025 • Semester VII</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">CS-401: Distributed Systems &amp; Cloud Architectures</h1>
+<span class="font-code-sm text-code-sm text-on-surface-variant">(4 Credits • L-T-P: 3-1-0)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+        Comprehensive syllabus mapping verifying Outcome-Based Education (OBE) compliance, cognitive attainment metrics, and continuous department audit standards.
+      </p>
+</div>
+<!-- Reviewer Toolbar -->
+<div class="flex flex-wrap items-center gap-2 xl:self-end">
+<div class="flex items-center rounded-lg bg-surface-container-low p-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest font-label-md text-label-md transition-all shadow-none" id="toggle-filter">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Filter</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md transition-all" id="toggle-blooms">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Bloom's Taxonomy</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest font-label-md text-label-md transition-all shadow-none" id="toggle-justifications">
+<span class="material-symbols-outlined text-[16px]">notes</span>
+<span>Justifications</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md shadow-sm transition-all" id="btn-run-validation">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Run Validation Engine</span>
+</button>
+</div>
+</div>
+<!-- Main Bento Grid (Matrix & Validation Drawer) -->
+<div class="grid grid-cols-1 2xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Center Primary Canvas (8 cols on 2xl) -->
+<div class="2xl:col-span-8 flex flex-col gap-space-lg w-full">
+<!-- Course Learning Outcomes (COs) Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md lg:p-space-lg">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-code-xs text-code-xs">CO</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Course Learning Outcomes (COs) Taxonomy</h2>
+</div>
+<span class="font-code-xs text-code-xs text-outline">5 Prescribed Outcomes</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- CO 1 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">CO1</span>
+<div>
+<p class="font-body-md text-body-md text-primary font-medium">Analyze distributed consensus protocols, safety guarantees, and state-machine replication.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Cognitive: Level 4 (Analyze)
+                  </span>
+<span class="text-outline font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-outline">Direct Assessment: Mid-term Exam (40%)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                Valid
+              </span>
+</div>
+</div>
+<!-- CO 2 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">CO2</span>
+<div>
+<p class="font-body-md text-body-md text-primary font-medium">Evaluate Byzantine fault tolerance and quorum slicing mechanisms in partition scenarios.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Cognitive: Level 5 (Evaluate)
+                  </span>
+<span class="text-outline font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-outline">Direct Assessment: Seminar &amp; Term Quiz</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                Valid
+              </span>
+</div>
+</div>
+<!-- CO 3 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">CO3</span>
+<div>
+<p class="font-body-md text-body-md text-primary font-medium">Implement Raft leader election and log replication services in concurrent Go routines.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Cognitive: Level 3 (Apply)
+                  </span>
+<span class="text-outline font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-outline">Direct Assessment: Lab Milestone 1 &amp; 2</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-error">warning</span>
+                Missing PO5 Link
+              </span>
+</div>
+</div>
+<!-- CO 4 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">CO4</span>
+<div>
+<p class="font-body-md text-body-md text-primary font-medium">Design serverless microservices with automated horizontal pod autoscaling on cloud infrastructures.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Cognitive: Level 6 (Create)
+                  </span>
+<span class="text-outline font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-outline">Direct Assessment: Cloud Capstone Project</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                Valid
+              </span>
+</div>
+</div>
+<!-- CO 5 -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all gap-3">
+<div class="flex items-start lg:items-center gap-3">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">CO5</span>
+<div>
+<p class="font-body-md text-body-md text-primary font-medium">Appraise privacy implications, ethical compliance, and SLA guarantees in federated cloud tenancy.</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="font-code-xs text-code-xs text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Cognitive: Level 5 (Evaluate)
+                  </span>
+<span class="text-outline font-code-xs text-code-xs">•</span>
+<span class="font-code-xs text-code-xs text-outline">Direct Assessment: Case Study Defense</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-code-xs text-code-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">error</span>
+                Rubric Detached
+              </span>
+</div>
+</div>
+</div>
+</section>
+<!-- CO-PO-PSO Alignment Matrix Table Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md lg:p-space-lg overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[14px]">unfold_more_double</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Articulation Matrix (CO-PO-PSO)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Click cell tags to cycle mapping correlation: <span class="font-code-xs text-code-xs text-primary font-semibold">– (None) → 1 (Low) → 2 (Medium) → 3 (High)</span>
+</p>
+</div>
+<div class="flex items-center gap-2 font-code-xs text-code-xs self-start sm:self-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">
+              Target Threshold: ≥ 2.00
+            </span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto pb-2">
+<table class="w-full text-left border-collapse min-w-[760px]" id="alignment-matrix">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-code-sm text-code-sm">
+<th class="p-2.5 font-semibold text-primary rounded-l-lg w-20">Outcome</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO1: Engineering Knowledge">PO1</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO2: Problem Analysis">PO2</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO3: Design &amp; Development">PO3</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO4: Investigations of Complex Problems">PO4</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO5: Modern Tool Usage">PO5</th>
+<th class="p-2.5 font-semibold text-center w-14" title="PO8: Ethics &amp; Professionalism">PO8</th>
+<th class="p-2.5 font-semibold text-center w-14 bg-surface-container" title="PSO1: Distributed Systems Engineering">PSO1</th>
+<th class="p-2.5 font-semibold text-center w-14 bg-surface-container" title="PSO2: Cloud Platforms &amp; Scalability">PSO2</th>
+<th class="p-2.5 font-semibold text-right rounded-r-lg w-20">Row Avg</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row CO1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span>CO1</span>
+<span class="text-[10px] px-1 rounded bg-surface-container text-on-surface-variant">L4</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-low text-outline hover:bg-secondary-fixed transition-colors" data-val="1">1</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-outline hover:bg-surface-container transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-primary">2.28</td>
+</tr>
+<!-- Row CO2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span>CO2</span>
+<span class="text-[10px] px-1 rounded bg-surface-container text-on-surface-variant">L5</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-outline hover:bg-surface-container transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-outline hover:bg-surface-container transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-low text-outline hover:bg-secondary-fixed transition-colors" data-val="1">1</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-primary">2.50</td>
+</tr>
+<!-- Row CO3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span>CO3</span>
+<span class="text-[10px] px-1 rounded bg-surface-container text-on-surface-variant">L3</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center">
+<!-- Highlighted Warning Cell -->
+<button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-highest text-error font-semibold hover:bg-secondary-fixed transition-colors" data-val="-" title="Should map to PO5 for Go Tooling">-</button>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-outline hover:bg-surface-container transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-primary">2.50</td>
+</tr>
+<!-- Row CO4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span>CO4</span>
+<span class="text-[10px] px-1 rounded bg-surface-container text-on-surface-variant">L6</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-outline hover:bg-surface-container transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-primary">2.71</td>
+</tr>
+<!-- Row CO5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-2.5 font-code-sm text-code-sm font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span>CO5</span>
+<span class="text-[10px] px-1 rounded bg-surface-container text-on-surface-variant">L5</span>
+</div>
+</td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-low text-outline hover:bg-secondary-fixed transition-colors" data-val="1">1</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-outline hover:bg-surface-container transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm text-outline hover:bg-surface-container transition-colors" data-val="-">-</button></td>
+<td class="p-2 text-center"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-high text-primary font-semibold hover:bg-secondary-fixed transition-colors" data-val="3">3</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container-low text-outline hover:bg-secondary-fixed transition-colors" data-val="1">1</button></td>
+<td class="p-2 text-center bg-surface-container-low/40"><button class="matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors" data-val="2">2</button></td>
+<td class="p-2.5 text-right font-code-sm text-code-sm font-semibold text-primary">1.83</td>
+</tr>
+</tbody>
+<!-- Table Footer Summary -->
+<tfoot class="border-t border-surface-container bg-surface-container-low/70 font-code-sm text-code-sm">
+<tr>
+<td class="p-2.5 font-semibold text-primary">Column Mean</td>
+<td class="p-2.5 text-center font-semibold text-primary">2.20</td>
+<td class="p-2.5 text-center font-semibold text-primary">2.80</td>
+<td class="p-2.5 text-center font-semibold text-primary">2.50</td>
+<td class="p-2.5 text-center font-semibold text-primary">2.40</td>
+<td class="p-2.5 text-center font-semibold text-on-surface-variant">2.00</td>
+<td class="p-2.5 text-center font-semibold text-primary">3.00</td>
+<td class="p-2.5 text-center font-semibold text-primary bg-surface-container-low">2.40</td>
+<td class="p-2.5 text-center font-semibold text-primary bg-surface-container-low">2.00</td>
+<td class="p-2.5 text-right font-semibold text-primary">2.36</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-code-xs text-code-xs">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-surface-container-high"></span> 3: Substantial</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-surface-container"></span> 2: Moderate</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-surface-container-low"></span> 1: Slight</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-surface-lowest border border-surface-container"></span> –: No Correlation</span>
+</div>
+<span class="text-outline">NBA Manual Criteria 3.1 Validation Met (Overall Index: 2.36)</span>
+</div>
+</section>
+<!-- Revision Notes & Decision Approval Bar -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container text-primary flex items-center justify-center font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[14px]">rate_review</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Reviewer Assessment &amp; Routing</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-code-xs text-code-xs">Assigned: Dr. A. Sharma (Peer Lead)</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="reviewer-notes">Observations / Remediation Notes</label>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-low text-primary font-body-md text-body-md focus:bg-surface-container-lowest outline-none transition-all placeholder:text-outline" id="reviewer-notes" placeholder="Enter academic feedback or justification remarks for department syllabus board..." rows="3"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Audit Trail (v2.3 → v2.4)</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Draft NBA Self-Study PDF</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-error-container text-on-error-container hover:bg-error/20 font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">assignment_return</span>
+<span>Request Revisions</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Recommend to HOD</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Drawer: Validation Engine & Accreditation Audit Checks (4 cols on 2xl) -->
+<div class="2xl:col-span-4 flex flex-col gap-space-md w-full">
+<!-- Accreditation & OBE Audit Drawer Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-primary text-on-primary flex items-center justify-center font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[14px]">rule</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Accreditation Audit Engine</h3>
+</div>
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">1 Alert • 1 Error</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Live automated checks run against autonomous tier-1 engineering curriculum guidelines.
+        </p>
+<!-- Status Cards Stack -->
+<div class="flex flex-col gap-3">
+<!-- Check 1: Passed -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Credit Breakdown Consistency</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">L-T-P (3-1-0) matches standard contact hours allocation of 4 credits.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-code-xs text-code-xs text-outline">Automated Rule: CR-01</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-xs text-code-xs">Verified</span>
+</div>
+</div>
+<!-- Check 2: Warning -->
+<div class="p-3.5 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">CO3 Lacks PO5 Tool Correlation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Outcome involves Go concurrence implementation &amp; distributed testing, yet PO5 (Modern Tool Usage) is marked unmapped '–'.</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1" id="btn-fix-po5">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
+                Auto-map PO5 → '2'
+              </button>
+<button class="px-2.5 py-1 rounded bg-transparent hover:bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm transition-all">
+                Dismiss
+              </button>
+</div>
+</div>
+<!-- Check 3: Red Error -->
+<div class="p-3.5 rounded-lg bg-error-container/40 flex flex-col gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">error</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-error">CO5 Continuous Assessment Detached</span>
+<span class="font-body-sm text-body-sm text-on-error-container">CO5 (Appraise cloud ethics &amp; SLA) does not have an active rubric linked in the Continuous Internal Evaluation (CIE) matrix.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="px-2.5 py-1 rounded bg-error text-on-error hover:bg-primary font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                Attach Case Study Rubric
+              </button>
+<span class="font-code-xs text-code-xs text-error font-medium">Blocking</span>
+</div>
+</div>
+</div>
+<!-- Inline Reviewer Discussion Snippet -->
+<div class="pt-2 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Thread Activity</span>
+<span class="font-code-xs text-code-xs text-outline">1 unread</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-code-xs text-code-xs flex items-center justify-center font-bold">AS</div>
+<span class="font-label-md text-label-md font-medium text-primary">Dr. A. Sharma (Reviewer)</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              “Please ensure the PSO2 alignment for CO4 reflects the updated Kubernetes container orchestration modules finalized in the 2024 Board of Studies.”
+            </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="text-secondary hover:text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">reply</span> Reply to Peer
+              </button>
+<span class="text-outline">•</span>
+<button class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm">Mark Resolved</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Cognitive Balance Metric Visual Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Bloom's Level Spread</span>
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Higher Cognitive &gt; 60%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Distribution across 5 outcomes fulfills autonomous senior semester expectations.
+        </p>
+<!-- Cognitive Distribution Bars -->
+<div class="flex flex-col gap-2 pt-1 font-code-xs text-code-xs">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">L3 (Apply) — 20%</span>
+<span class="text-primary font-semibold">1 outcome</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 20%;"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-on-surface-variant">L4 (Analyze) — 20%</span>
+<span class="text-primary font-semibold">1 outcome</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 20%;"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-on-surface-variant">L5 (Evaluate) — 40%</span>
+<span class="text-primary font-semibold">2 outcomes</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 40%;"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-on-surface-variant">L6 (Create) — 20%</span>
+<span class="text-primary font-semibold">1 outcome</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 20%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-interactions Script -->
+<script>
+    (function initMatrixInteractivity() {
+      const cycleValues = ['-', '1', '2', '3'];
+      const cellButtons = document.querySelectorAll('.matrix-cell');
+
+      cellButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const currentVal = this.getAttribute('data-val') || '-';
+          const currentIndex = cycleValues.indexOf(currentVal);
+          const nextIndex = (currentIndex + 1) % cycleValues.length;
+          const nextVal = cycleValues[nextIndex];
+
+          this.setAttribute('data-val', nextVal);
+          this.textContent = nextVal;
+
+          // Dynamically adjust color tokens based on value
+          this.classList.remove('bg-surface-container-high', 'bg-surface-container', 'bg-surface-container-low', 'bg-surface-container-highest', 'text-primary', 'text-on-surface', 'text-outline', 'text-error');
+
+          if (nextVal === '3') {
+            this.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold');
+          } else if (nextVal === '2') {
+            this.classList.add('bg-surface-container', 'text-on-surface', 'font-medium');
+          } else if (nextVal === '1') {
+            this.classList.add('bg-surface-container-low', 'text-outline');
+          } else {
+            this.classList.add('text-outline');
+          }
+        });
+      });
+
+      // Quick fix PO5 trigger
+      const fixPo5Btn = document.getElementById('btn-fix-po5');
+      if (fixPo5Btn) {
+        fixPo5Btn.addEventListener('click', function() {
+          const row3po5 = document.querySelector('tr:nth-child(3) td:nth-child(6) button');
+          if (row3po5) {
+            row3po5.setAttribute('data-val', '2');
+            row3po5.textContent = '2';
+            row3po5.className = 'matrix-cell px-2 py-1 rounded font-code-sm text-code-sm bg-surface-container text-on-surface font-medium hover:bg-secondary-fixed transition-colors';
+            fixPo5Btn.closest('.p-3.5').style.display = 'none';
+          }
+        });
+      }
+
+      // Run Validation feedback
+      const runValidation = document.getElementById('btn-run-validation');
+      if (runValidation) {
+        runValidation.addEventListener('click', function() {
+          const original = this.innerHTML;
+          this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">autorenew</span> Running Checks...';
+          setTimeout(() => {
+            this.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span> Audit Refreshed';
+            setTimeout(() => {
+              this.innerHTML = original;
+            }, 1800);
+          }, 600);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
